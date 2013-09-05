@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>Secret Space Encryptor for Android - File Encryptor</title>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="shortcut icon" href="/android_asset/img/sse_favicon.png"></link>
+</head>
+<body>
+	<h1>File Encryptor</h1>
+	
+	<div class="screenShot">
+		<img src="../../img/fileencryptor_SSB.png" usemap="#ScreenShotMap" />
+	</div>
+	
+	<map name="ScreenShotMap">
+		<area shape='rect' coords='57,10,97,50' href="javascript:scrollToElement('anchor_a')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='229,10,269,50' href="javascript:scrollToElement('anchor_b')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='228,111,268,151' href="javascript:scrollToElement('anchor_c')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='226,245,266,285' href="javascript:scrollToElement('anchor_d')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='152,387,192,427' href="javascript:scrollToElement('anchor_e')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='66,387,106,427' href="javascript:scrollToElement('anchor_f')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='3,387,43,427' href="javascript:scrollToElement('anchor_g')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='96,300,136,340' href="javascript:scrollToElement('anchor_h')" tabindex="1" onmouseover="this.focus();"/>	
+	</map>
+	
+	<div class="anchor" id="anchor_a">
+		<h2>A - Available Drives</h2>
+		<ul>
+			<li>shortcuts to the available volumes on the current device</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_b">
+		<h2>B - Current Volume Parameters</h2>
+		<ul>
+			<li>available space / volume size</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_c">
+		<h2>C - Selected File/Folder</h2>
+		<ul>
+			<li>long click to select <b><i>folder</i></b></li>
+			<li>short click to select <b><i>file</i></b></li>
+			<li><b>Selected file or folder can be:</b>
+				<ul>
+					<li><i><b>Encrypted or Decrypted</b></i> (according to the state of the selected file) by <a href="javascript:scrollToElement('anchor_e')">Encrypt/Decrypt Button (E)</a></li>
+					<li><i><b>Renamed, Opened, Deleted or <a href="javascript:scrollToElement('anchor_more')">Wiped</a></b></i> by using "menu button" on your device</li>
+					<li><i><b>Note:</b></i> long click on a <b>file</b> leads to the same behavior as using the "menu button" on the selected file/folder</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_d">
+		<h2>D - Encrypted File</h2>
+		<ul>
+			<li>encrypted file can be recognized by: <i><b>.enc</b></i> extension, purple background and "lock" icon</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_e">
+		<h2>E - Encrypt/Decrypt Button</h2>
+		<ul>
+			<li>encrypt or decrypt (according to the currently selected item) file or folder </li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_f">
+		<h2>F - Compression ON/OFF</h2>
+		<ul>
+			<li>activate/deactivate data compression</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_g">
+		<h2>G - Directly to the Main Menu</h2>
+		<ul>
+			<li>go directly to the application <i><b>Main Menu</b></i></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_h">
+		<h2>H - More Button</h2>
+		<ul>
+			<li>Selected File/Folder can be <i><b>Renamed, Deleted, <a href="javascript:scrollToElement('anchor_more')">Wiped</a> or Opened (file)</b></i></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_more">
+		<h2>More...</h2>
+		<ul>
+			<li>only one file or folder can be selected at once - if you want to encrypt more files together, copy them to a folder</li>
+			<li>encryption/decryption process can be interrupted by "Back Button"</li>
+			<li><b>Wiping</b> - data are physically overwritten before deleting (cannot be undeleted)</li>
+			<li>
+				<b>Icons</b><br/>
+				<div class="delimiter">&nbsp;</div>
+				<table class="color">
+					<tr>
+						<td><img src="../../img/icons/directory.png"/></td>
+						<td>Folder</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/directory_readonly.png"/></td>
+						<td>Read Only Folder</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file.png"/></td>
+						<td>File</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_readonly.png"/></td>
+						<td>Read Only File</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_enc.png"/></td>
+						<td>Encrypted File</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_enc_readonly.png"/></td>
+						<td>Read Only Encrypted File</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/back_file.png"/></td>
+						<td>Back to the Parent Folder</td>
+					</tr>
+				</table>
+				<div class="delimiter">&nbsp;</div>
+			</li>
+			<li><b>Incorrect Password</b>
+				<ul>
+					<li>there is no way to decrypt any file without correct password</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="toMainMenu" class="gradient"><a href="/sse">&lt;&lt; Back to SSE main menu</a></div>
+	<div id="reserveSpace"></div>
+	<script language="JavaScript">formatPage();</script>
+	
+</body>
+</html>

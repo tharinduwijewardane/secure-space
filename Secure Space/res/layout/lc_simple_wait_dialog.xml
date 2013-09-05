@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	>
+	<TextView
+		android:text=""
+		android:id="@+id/WD_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:paddingTop="3dp"
+		android:paddingLeft="6dp"
+		style="@style/TextViewSingleLine"
+		></TextView>
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+		android:paddingBottom="15dp"
+		android:paddingTop="15dp"
+		>
+		<ImageView
+			android:id="@+id/WD_image"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:adjustViewBounds="true"
+			android:maxWidth="152px"
+			android:maxHeight="127px"
+			android:padding="0px"
+			android:layout_margin="0px"
+			/>
+	</FrameLayout>
+</RelativeLayout>

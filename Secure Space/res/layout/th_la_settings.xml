@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/d_black" >
+
+    <ScrollView
+        android:id="@+id/S_settingsListScroll_th"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/S_bottomButtons"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top" >
+
+        <LinearLayout
+            android:id="@+id/S_settingsList_th"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingRight="0dp" >
+
+            <TextView
+                android:id="@+id/tvPassword_th"
+                style="@style/TextViewTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/etPassword_th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+
+            <View style="@style/DelimiterThin" />
+
+            <TextView
+                style="@style/TextViewTitleBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Location Settings" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewTitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Enable Location Service:" />
+
+                <ToggleButton
+                    android:id="@+id/tbLocation_th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="" />
+
+            </RelativeLayout>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Allowed Location" />
+
+            <EditText
+                android:id="@+id/etAllowedLocation_th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+
+            <View style="@style/DelimiterThin" />
+
+            <TextView
+                style="@style/TextViewTitleBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="NFC Settings" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewTitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Enable NFC Service:" />
+
+                <ToggleButton
+                    android:id="@+id/tbNFC_th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="" />
+                
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvEncTag_th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Encryptor NFC tag" />
+
+            <EditText
+                android:id="@+id/etEncTag_th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvDecTag_th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Decryptor NFC tag" />
+
+            <EditText
+                android:id="@+id/etDecTag_th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/S_bottomButtons_th"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dialogButtonsBackground"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/bHelpButton_th"
+            style="@style/ButtonHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" >
+        </Button>
+
+        <Button
+            android:id="@+id/bSaveButton_th"
+            style="@style/ButtonExpander"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_saveSettings" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.NoBackground" parent="android:Theme">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    
+	<!-- <style name="Theme.SSE" parent="@android:style/Theme"> -->
+	<style name="Theme.SSE" parent="android:Theme">
+		<item name="android:windowBackground">@drawable/d_background_a</item>
+		<item name="android:windowTitleBackgroundStyle">@style/Application_Title_Background</item>
+        <!-- <item name="android:windowNoTitle">true</item> -->
+    </style>
+    
+</resources>
+
+

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">S.S.E.</string>
+	<string name="app_name_full">Secret Space Encryptor</string>
+	
+	<!-- Common -->
+	<string name="common_app_passwordVault_name">Správce Hesel</string>
+	<string name="common_app_messageEncryptor_name">Šifrování Textu</string>
+	<string name="common_app_fileEncryptor_name">Šifrování Souborů</string>
+	<string name="common_app_settings_name">Nastavení</string>
+	<string name="common_app_otherUtils_name">Další Nástroje</string>
+	<string name="common_returnToMainMenuTitle">Zpět na hlavní stránku</string>
+	<string name="common_ok_text">OK</string>
+	<string name="common_of_text">z</string>
+	<string name="common_cancel_text">Storno</string>
+	<string name="common_yes_text">Ano</string>
+	<string name="common_no_text">Ne</string>
+	<string name="common_algorithm_text">Alg.</string>
+	<string name="common_benchmark_text">Benchmark</string>
+	<string name="common_deleting_text">Mazání</string>
+	<string name="common_question_delete">Smazat &lt;b&gt;&lt;1&gt;&lt;/b&gt;?</string>
+	<string name="common_question_wipe">Smazat (s Wipe) &lt;b&gt;&lt;1&gt;&lt;/b&gt;?</string>
+	<string name="common_question_leave">Opustit &lt;b&gt;&lt;1&gt;&lt;/b&gt;?</string>
+	<string name="common_question_saveChanges">Uložit změny?</string>
+	<string name="common_question_delete_confirm">Vybraná položka byla smazána.</string>
+	<string name="common_name_text">Název</string>
+	<string name="common_password_text">Heslo</string>
+	<string name="common_comment_text">Komentář</string>
+	<string name="common_notes_text">Poznámky</string>
+	<string name="common_delete_text">Smazat</string>
+	<string name="common_save_text">Uložit</string>
+	<string name="common_edit_text">Editovat</string>
+	<string name="common_item_text">Položka</string>
+	<string name="common_folder_text">Adresář</string>
+	<string name="common_file_text">Soubor</string>
+	<string name="common_new_text">Nový</string>
+	<string name="common_message_text">Zpráva</string>
+	<string name="common_toMainPage">Hlavní Menu</string>
+	<string name="common_enter_text">Zadat</string>
+	<string name="common_leave_text">Opustit</string>
+	<string name="common_copy_text">Kopírovat</string>
+	<string name="common_paste_text">Vložit</string>
+	<string name="common_encrypt_text">Šifrovat</string>
+	<string name="common_decrypt_text">Dešifrovat</string>
+	<string name="common_moveTo_text">Přesunout</string>
+	<string name="common_moveToFolder_text">Přesunout do složky</string>
+	<string name="common_moreDots_text">Více...</string>
+	<string name="common_importVault_text">Importovat Vault</string>
+	<string name="common_error_invalid_password_file_text">Nesprávné heslo, nebo poškozený soubor.</string>
+	<string name="common_error_invalid_checksum_file_text">Nevalidní kontrolní součet. Soubor je poškozen.</string>
+	<string name="common_enterTheName_text">Zadejte &lt;b&gt;název&lt;/b&gt;.</string>
+	<string name="common_enterThePassword_text">Zadejte &lt;b&gt;heslo&lt;/b&gt;.</string>
+	<string name="common_enterFileName_text">Zadejte název souboru</string>
+	<string name="common_fileNameAlreadyExists_text">Název &lt;b&gt;&lt;1&gt;&lt;/b&gt; již existuje.</string>
+	<string name="common_fileRenamed_text">Soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt; byl přejmenován na &lt;b&gt;&lt;2&gt;&lt;/b&gt;</string>
+	<string name="common_fileFailedToRename">Přejmenování souboru &lt;b&gt;&lt;1&gt;&lt;/b&gt; se nezdařilo</string>
+	<string name="common_generatingKey_text">Generování klíče</string>
+	<string name="common_compressing_text">Komprimace</string>
+	<string name="common_encrypting_text">Šifrování</string>
+	<string name="common_decompressing_text">Dekomprimace</string>
+	<string name="common_decrypting_text">Dešifrování</string>
+	<string name="common_wiping_text">Wiping</string>
+	<string name="common_current_text">Aktuální</string>
+	<string name="common_unlock_text">Odemknout</string>
+	<string name="common_locked_text">Uzamčeno</string>
+	<string name="common_incorrectFile_text">Nekorektní soubor</string>
+	<string name="common_unknownAlgorithm_text">Neznámý algoritmus</string>
+	<string name="common_copyToClipboard_text">Kopírovat do schránky</string>
+	<string name="common_passwordCopiedToClipboard_text">Heslo bylo zkopírováno do schránky systému.</string>
+	<string name="common_copyToClipboardWarning"><![CDATA[<font face="times new roman" color="#BBBB77"><small><i><b>Pozn.:</b> Buďte opatrní při použití schránky systému pro manipulaci s citlivými daty jako jsou hesla. Některé aplikace mohou schránku monitorovat a případně i archivovat její obsah.</i></small></font>]]></string>
+	<string name="common_xmlParsing_unexpectedElement">Neočekávaný Element</string>
+	<string name="common_xmlParsing_incorrectSize">Nekorektní Velikost</string>
+	<string name="common_xmlParsing_incorrectData">Nekorektní Data</string>
+	<string name="common_xmlParsing_elementMissing">Chybí povinný element</string>
+	
+	<!-- Main Activity -->
+	<string name="main_passwordVaultButton">Správce Hesel</string>
+	<string name="main_messageEncButton">Šifrování Textu</string>
+	<string name="main_fileEncButton">Šifrování Souborů</string>
+	<string name="main_otherUtils">Další Nástroje</string>
+	<string name="main_settingsButton">Nastavení</string>
+	<string name="main_helpButton">Nápověda</string>
+	<string name="main_exitButton">Konec</string>
+	<string name="main_AvailableAlgorithmsText">&lt;br/&gt;&lt;b&gt;Dostupné algoritmy:&lt;/b&gt;</string>
+	<string name="main_report_title">&lt;b&gt;Report:&lt;/b&gt;&lt;br/&gt;</string>
+	<string name="main_firstStartup_text">První spuštění: </string>
+	<string name="main_lastStartup_text">Předešlé spuštění: </string>
+	<string name="main_numberOfStartups_text">Počet spuštění: </string>
+	<string name="main_dbIntegrity_text">Integrita databáze: </string>
+	
+	
+	<!-- FileEnc Activity -->
+	<string name="fe_goButton">Šifrovat/Dešifrovat</string>
+	<string name="fe_goButtonEncFile">Šifrovat Soubor</string>
+	<string name="fe_goButtonDecFile">Dešifrovat Soubor</string>
+	<string name="fe_goButtonEncDir">Šifrovat Adresář</string>
+	<string name="fe_tip_1">Tip: Dlouhý klik pro označení adresáře.</string>
+	<string name="fe_tip_2">Tip: Mazání – označit Soubor/Adresář, tlačítko Menu, vybrat Smazat</string>
+	<string name="fe_tip_3">Tip: Přejmenování – označit Soubor/Adresář, tlačítko Menu, vybrat Přejmenovat</string>
+	<string name="fe_selected_text">Označeno:</string>
+	<string name="fe_currentDir_text">Složka:</string>
+	<string name="fe_emptyDir_text">Prázdný adresář</string>
+	<string name="fe_question_cancel_title">Storno</string>	
+	<string name="fe_question_cancel_question">Ukončit současnou akci?</string>
+	<string name="fe_file_dialogTitle">Soubor</string>
+	<string name="fe_folder_dialogTitle">Adresář</string>
+	<string name="fe_deleteFile_dialogTitle">Smazat soubor</string>
+	<string name="fe_deleteFolder_dialogTitle">Smazat adrasář</string>
+	<string name="fe_wipeFile_dialogTitle">Wipe soubor</string>
+	<string name="fe_wipeFolder_dialogTitle">Wipe adresář</string>
+	<string name="fe_fileactionDialog_deleteFile">Smazat soubor</string>
+	<string name="fe_fileactionDialog_deleteFolder">Smazat adresář</string>
+	<string name="fe_fileactionDialog_wipeFile">Wipe soubor</string>
+	<string name="fe_fileactionDialog_wipeFolder">Wipe adresář</string>
+	<string name="fe_fileactionDialog_renameFile">Přejmenovat soubor</string>
+	<string name="fe_fileactionDialog_renameFolder">Přejmenovat adresář</string>
+	<string name="fe_fileactionDialog_openFile">Otevřít soubor</string>
+	<string name="fe_fileactionDialog_sendFile">Odeslat</string>
+	<string name="fe_fileactionDialog_noFileSelected">Žádný soubor není označen.</string>
+	<string name="fe_fileDeleted">Označený soubor smazán.</string>
+	<string name="fe_fileNotDeleted">Označený soubor nelze smazat.</string>
+	<string name="fe_fileReadOnly">Soubor je určen jen pro čtení.</string>
+	<string name="fe_parentDirectoryReadOnly">Nadřazená složka je určena jen pro čtení.</string>
+	<string name="fe_directoryCannotBeSelected">Tento adresář nelze označit.</string>
+	<string name="fe_fileRename">Nový název souboru</string>
+	<string name="fe_report_title">Report</string>
+	<string name="fe_report_dec_title">Dešifrovat: Report</string>
+	<string name="fe_report_enc_title">Zašifrovat: Report</string>
+	<string name="fe_report_inputFile">Vstupní soubor: &lt;b&gt;&lt;1&gt;&lt;/b&gt;</string>
+	<string name="fe_report_outputFile">Výstupní soubor: &lt;b&gt;&lt;1&gt;&lt;/b&gt;</string>
+	<string name="fe_report_inputFolder">Vstupní adresář: &lt;b&gt;&lt;1&gt;&lt;/b&gt;</string>
+	<string name="fe_report_outputFolder">Výstupní adresář: &lt;b&gt;&lt;1&gt;&lt;/b&gt;</string>
+	<string name="fe_report_wiped">&lt;b&gt;Smazáno:&lt;/b&gt;</string>
+	<string name="fe_report_deleted">&lt;b&gt;Smazáno:&lt;/b&gt;</string>
+	<string name="fe_report_wipedFiles">Soubory - &lt;1&gt; of &lt;2&gt;</string>
+	<string name="fe_report_wipedFolders">Adresáře - &lt;1&gt; of &lt;2&gt;</string>
+	<string name="fe_report_crc_ok">CRC: OK</string>
+	<string name="fe_report_crc_failed">CRC: FAILED</string>
+	<string name="fe_integrity_error">Chyba integrity v souborech:</string>
+	<string name="fe_wipingTempFiles">Wiping dočasných souborů</string>
+	<string name="fe_fileAction">Akce se souborem</string>
+	<string name="fe_cannotPerformThisAction">Žádná aplikace pro tuto akci</string>
+	<string name="fe_message_wipe_interrupted_tempfiles">Wiping dočasných souborů nelze přerušit.</string>
+	<string name="fe_message_wipe_interrupted_aftercurrent">Bude přerušeno po dokončení současného souboru.</string>
+	<string name="fe_message_wipe_folder_2GBlimit"><![CDATA[Promiňte - Velikost zvoleného adresáře je <1>. Funkce Wiping je aktuálně limitována na 2GB.]]></string>
+	<string name="fe_message_wipe_file_2GBlimit"><![CDATA[Promiňte - Velikost zvoleného souboru je <1>. Funkce Wiping je aktuálně limitována na 2GB.]]></string>
+	<string name="fe_compression_on"><![CDATA[Komprimace <b>Zapnuta</b>]]></string>
+	<string name="fe_compression_off"><![CDATA[Komprimace <b>Vypnuta</b>]]></string>
+	
+	
+	<!-- MessageEnc Activity -->
+	<string name="me_encryptedToClipboard">Zašifrovaná zpráva byla uložena do schránky.</string>
+	<string name="me_decryptedToClipboard">Zpráva byla uložena do schránky.</string>
+	<string name="me_decryptError">Nesprávné heslo, nebo poškozená zpráva.</string>
+	<string name="me_decryptChecksumError">Nesprávný kontrolní součet.</string>
+	<string name="me_emptyEncTextArea">Prázdné pole \"Zašifrovat text\".</string>
+	<string name="me_emptyDecTextArea02">Žádný text ke kopírování.</string>
+	<string name="me_emptyDecTextArea">Prázdné pole \"Dešifrovat text\".</string>
+	<string name="me_emptyClipboard">Schránka je prázdná.</string>
+	<string name="me_emptyInputArea">Žádný text ke kopírování.</string>
+	<string name="me_encHint">Dešifrovat text</string>
+	<string name="me_decHint">Zašifrovat text</string>
+	<string name="me_moreDialog_Title">Více</string>
+	<string name="me_moreDialog_loadMessage">Nahrát zprávu z DB</string>
+	<string name="me_moreDialog_saveMessage">Uložit zprávu do DB</string>
+	<string name="me_moreDialog_deleteMessage">Smazat zprávu z DB</string>
+	<string name="me_moreDialog_deleteMessage_dialogTitle">Smazat zprávu</string>
+	<string name="me_moreDialog_noMessagesInDB">Žádná zpráva v DB</string>
+	<string name="me_moreDialog_saveMessage_SetNameTitle">Zadejte název</string>
+	<string name="me_moreDialog_saveMessage_Saved">Zpráva &lt;b&gt;&lt;1&gt;&lt;/b&gt; uložena.</string>
+	<string name="me_moreDialog_noName">Zadejte název.</string>
+	<string name="me_moreDialog_nameAlreadyExist">Název &lt;b&gt;&lt;1&gt;&lt;/b&gt; již existuje.</string>
+	
+	
+	<!-- PasswordVault Activity -->
+	<string name="pwv_start_helpMe">Pokračovat do správce hesel!</string>
+	<string name="pwv_folder_text">Složka</string>
+	<string name="pwv_newItem_text">Přidat položku</string>
+	<string name="pwv_newFolder_text">Nová složka</string>
+	<string name="pwv_failedOnEnter">Nesprávné heslo</string>
+	<string name="pwv_folderDialog_title">Atributy složky</string>
+	<string name="pwv_itemMoveToFolderReport">Položka: &lt;b&gt;&lt;1&gt;&lt;/b&gt;&lt;br/&gt;Přesunuta do: &lt;b&gt;&lt;2&gt;&lt;/b&gt;</string>
+	<string name="pwv_moreDialog_changePassword">Změnit heslo</string>
+	<string name="pwv_moreDialog_enterPassword">Zadat heslo</string>
+	<string name="pwv_moreDialog_resetVault">Resetovat správce</string>
+	<string name="pwv_moreDialog_importVault">Importovat ze souboru</string>
+	<string name="pwv_moreDialog_exportVault">Exportovat do souboru\n(šifrovaný PWV soubor)</string>
+	<string name="pwv_moreDialog_exportVaultXML">Exportovat do souboru\n(nešifrovaný XML soubor)</string>
+	<string name="pwv_moreDialog_exportVault_SetNameTitle">Zadejte název souboru</string>
+	<string name="pwv_moreDialog_exportVault_Saved">Soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt; úspěšně uložen do složky: &lt;b&gt;&lt;2&gt;&lt;/b&gt;</string>
+	<string name="pwv_moreDialog_importVault_dialogTitle">Importovat data</string>
+	<string name="pwv_moreDialog_importVault_Loaded">Soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt; úspěšně importován.</string>
+	<string name="pwv_moreDialog_importVault_Corrupted">Soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt; je vadný.</string>
+	<string name="pwv_moreDialog_importVault_NotValid">File &lt;b&gt;&lt;1&gt;&lt;/b&gt; není validní.</string>
+	<string name="pwv_moreDialog_importExportVault_Invalid">Import/Export adresář &lt;b&gt;&lt;1&gt;&lt;/b&gt; je neplatný. Pro zadání platné složky použijte nastavení.</string>
+	<string name="pwv_moreDialog_importVault_NoFilesToImport">Adresář &lt;b&gt;&lt;1&gt;&lt;/b&gt; neobsahuje soubory pro import </string>
+	<string name="pwv_moreDialog_importVault_ImportCriticalQuestion">Importovat soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt;?&lt;br/&gt; Aktuální data správce budou ztracena.</string>
+	<string name="pwv_moreDialog_importVault_ImportQuestion">Importovat soubor &lt;b&gt;&lt;1&gt;&lt;/b&gt;?</string>
+	<string name="pwv_moreDialog_resetVault_ResetCriticalQuestion">Opravdu chcete provést reset?&lt;br/&gt; Aktuální data správce budou ztracena.</string>
+
+	<string name="pwv_data_folder_00">Zaměstnání</string>
+	<string name="pwv_data_folder_01">Osobní</string>
+	<string name="pwv_data_folder_02">Dlouhý klik pro detail</string>
+	<string name="pwv_data_folder_03">Krátký klik zobrazí položky</string>
+	<string name="pwv_data_item_00">Dlouhý klik pro detail</string>
+	<string name="pwv_data_item_01">Krátký klik zobrazí heslo</string>
+	<string name="pwv_data_item_02">Panoramio / mujlogin</string>
+	<string name="pwv_data_item_00_password">tajne heslo</string>
+	<string name="pwv_data_item_01_password">tajne heslo</string>
+	<string name="pwv_data_item_02_password">mojeheslo</string>
+	<string name="pwv_data_item_00_comment">Všechna data obsažená ve správci hesel jsou šifrována jako jeden objekt. Všechny atributy (název, heslo, komentář, ...) jsou tak uloženy stejně bezpečně, jako heslo samo. Takže je lze podle toho používat.</string>
+	<string name="pwv_data_item_02_comment">Příklad.</string>
+	
+	<!-- Others Utils-->
+	<string name="ou_passwordGenerator">Generátor Hesel</string>
+	<string name="ou_clipboardCleaner">Clipboard Cleaner</string>
+	<string name="ou_algorithmBenchmark">Alg. Benchmark</string>
+	<string name="ou_applicationReport">Aplikační Report</string>
+	<string name="ou_clipboardCleaned">OK - Schránka promazána</string>
+	<string name="ou_clipboardCleanQuestion">Promazat schránku systému?</string>	
+	
+	<!-- Password Generator Dialog -->
+	<string name="passwordGeneratorDialog_generate_text">Generovat</string>
+	<string name="passwordGeneratorDialog_passwordGenerator_text">Generátor Hesel</string>
+	<string name="passwordGeneratorDialog_charset_text">Znaková sada</string>
+	<string name="passwordGeneratorDialog_lehgth_text">Délka</string>
+	<string name="passwordGeneratorDialog_set_text">Použít</string>
+	<string name="passwordGeneratorDialog_toClipboard_text">Do Schránky</string>
+	<string name="passwordGeneratorDialog_excludeCharacters"><![CDATA[&nbsp; Vynechat znaky: <b>0O\'`1l|I</b>]]></string>
+	<string name="passwordGeneratorDialog_replacePasswordQuestion">Pole heslo není prázdné. Nahradit heslo?</string>
+	<string name="passwordGeneratorDialog_copiedToClipboardOk">Heslo bylo uloženo do schránky systému (clipboard).</string>
+	
+	<!-- Password Dialog -->
+	<string name="passwordDialog_title_set">Definovat heslo</string>
+	<string name="passwordDialog_title_enter">Zadat heslo</string>
+	<string name="passwordDialog_title_change">Změnit heslo</string>
+	<string name="passwordDialog_title_incorrectCharacter">Nepodporovaný znak</string>
+	<string name="passwordDialog_incorrectCharacterReport">Jen ASCII 32-126 znaky jsou povoleny ve výchozím nastavení. Pokud chcete používat celou Unicode sadu znaků, použijte &lt;b&gt;Nastavení: Společné / Povolit Unicode Hesla&lt;/b&gt;. Další informace najdete v Nápovědě aplikace.</string>
+	<string name="passwordDialog_showPassword">  Ukázat heslo</string>
+	<string name="passwordDialog_passwordNotMatch">Hesla nesouhlasí.</string>
+	<string name="passwordDialog_noPassword">Zadejte heslo.</string>
+	<string name="passwordDialog_passwordShort">Krátké</string>
+	<string name="passwordDialog_passwordWeak">Slabé</string>
+	<string name="passwordDialog_passwordFair">Dobré</string>
+	<string name="passwordDialog_passwordStrong">Silné</string>
+	<string name="passwordDialog_oldPasswordHint">aktuální heslo</string>
+	<string name="passwordDialog_passwordHint">heslo</string>
+	<string name="passwordDialog_newPasswordHint">nové heslo</string>
+	<string name="passwordDialog_confirmPasswordHint">heslo podruhé</string>
+	<string name="passwordDialog_invalidPassword">Nesprávné heslo</string>
+	<string name="passwordDialog_invalidCurrentPassword">Neplatné aktuální heslo.</string>
+	<string name="passwordDialog_newPasswordSameAsCurrent">Nové heslo je shodné s aktuálním.</string>	
+	<string name="passwordDialog_passwordChanged">Heslo změněno.</string>
+	<string name="passwordDialog_cannotCancel">Zadání hesla nemůže být v této fázi přerušeno.</string>
+	
+	<!-- Others -->
+	<string name="main_exitDialog_title">Konec</string>
+	<string name="main_exitDialog_message">Ukončit aplikaci?</string>
+	<string name="cad_typeCode">opište kód</string>
+	<string name="cad_code_text">Kód:</string>
+	
+	<!-- Settings -->
+	<string name="s_saveSettings">Uložit změny</string>
+	<string name="s_algorithmBenchmark">Benchmark</string>
+	<string name="s_benchmark_init_text">Inicializace</string>
+	<string name="s_benchmark_overallScore_text">Celkové skóre</string>
+	<string name="s_benchmark_points_text">bodů</string>
+	<string name="s_benchmark_io_notincluded">Tento test nezohledňuje I/O operace souborového systému.</string>
+	<string name="SC_PasswordVault">Správce Hesel</string>
+	<string name="SC_MessageEnc">Šifrování Textu</string>
+	<string name="SC_FileEnc">Šifrování Souborů</string>
+	<string name="SC_Common">Společné</string>
+	<string name="SI_Algorithm">Algoritmus</string>
+	<string name="SI_LockScreen">Uzamknout obrazovku</string>
+	<string name="SI_LockScreenComment">v případě minimalizace aplikace (aplikace na pozadí)</string>
+	<string name="SI_ShowMenu">Zobrazit spodní menu</string>
+	<string name="SI_ShowMenuComment">zobrazit menu dalších možností již při otevření správce</string>
+	<string name="SI_HideInfoMessage">Skrýt informační zprávy</string>
+	<string name="SI_HideInfoMessageComment">skrýt méně důležité pop-up zprávy</string>
+	<string name="SI_ShowRoot">Zobrazovat Root adresář</string>
+	<string name="SI_ShowRootComment">kořenový adresář zařízení</string>
+	<string name="SI_ImportExportPath">Import/Export adresář</string>
+	<string name="SI_ImportExportPathComment">import/export adesář aplikace</string>
+	<string name="SI_AskIfReturnToMainPage">Dotázat se při opuštění</string>
+	<string name="SI_AskIfReturnToMainPageComment">potvrdit návrat do hlavního menu (při použití tlačítka Zpět)</string>
+	<string name="SI_ShowApplicationReport">Zobrazovat report</string>
+	<string name="SI_ShowApplicationReportComment">report na hlavní straně</string>
+	<string name="SI_HideTitleBar">Nezobrazovat titulek</string>
+	<string name="SI_HideTitleBarComment">schovat titulek aplikace</string>
+	<string name="SI_SystemErrorLog">Aktivovat System Log</string>
+	<string name="SI_SystemErrorLogComment">pouze pro případ řešení potíží - pro běžný chod neaktivovat</string>
+	<string name="SI_PasswordListFontSize">Velikost písma v seznamu hesel</string>
+	<string name="SI_PasswordListFontSizeComment">velikost textu v sekci seznamu hesel</string>
+	<string name="SI_AllowUnicodePasswords">Povolit Unicode Hesla</string>
+	<string name="SI_AllowUnicodePasswordsComment">odstranit omezení na znaky ASCII 32-126 pro hesla</string>
+	<string name="SI_WipeSourceFiles">Smazat zdroje po zašifrování</string>
+	<string name="SI_WipeSourceFilesComment">Automaticky smazat (s Wipe) zdrojové soubory po zašifrování</string>
+	<string name="SI_NativeCodeDisable">Zakázat Native Code Algoritmy</string>
+	<string name="SI_NativeCodeDisableComment">použít pouze verzi nezávislou na platformě (v případě problémů s N.C.)</string>
+	
+	
+	<!-- Colors -->
+	<string name="color_text">Barva</string>
+	<string name="color_yellow">Žlutá</string>
+	<string name="color_red">Červená</string>
+	<string name="color_purple">Fialová</string>
+	<string name="color_orange">Oranžová</string>
+	<string name="color_lightblue">Tyrkysová</string>
+	<string name="color_green">Zelená</string>
+	<string name="color_blue">Modrá</string>
+	
+	<string name="icon_spec_finance">Spec. Finance</string>
+	<string name="icon_spec_data">Spec. Data</string>
+	<string name="icon_spec_cards">Spec. Karty</string>
+	<string name="icon_spec_database">Spec. Databáze</string>
+	<string name="icon_spec_personal">Spec. Osobní</string>
+	<string name="icon_spec_internet">Spec. Internet</string>
+	<string name="icon_spec_freetime">Spec. Volný čas</string>
+	<string name="icon_spec_hardware">Spec. Hardware</string>
+	<string name="icon_spec_mail">Spec. Pošta</string>
+	<string name="icon_spec_games">Spec. Hry</string>
+	<string name="icon_spec_notes">Spec. Poznámky</string>
+	<string name="icon_spec_job">Spec. Práce</string>
+	<string name="icon_spec_education">Spec. Vzdělávání</string>
+	<string name="icon_spec_garbage">Spec. Odpad</string>
+	
+</resources>

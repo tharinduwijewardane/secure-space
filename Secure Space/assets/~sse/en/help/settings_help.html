@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>Secret Space Encryptor for Android - Settings</title>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="shortcut icon" href="/android_asset/img/sse_favicon.png"></link>
+</head>
+<body>
+	<h1>Settings</h1>
+	
+	<div class="screenShot">
+		<img src="../../img/settings_SSB.png" usemap="#ScreenShotMap" />
+	</div>
+	<div class="delimiter">&nbsp;</div>
+	
+	<map name="ScreenShotMap">
+		<area shape='rect' coords='211,136,251,176' href="javascript:scrollToElement('anchor_a')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='109,360,149,400' href="javascript:scrollToElement('anchor_b')" tabindex="1" onmouseover="this.focus();"/>
+	</map>
+	
+	<div class="anchor" id="anchor_a">
+		<h2>A - Available Settings</h2>
+		<ul>
+			<li><b>PasswordVault</b>
+				<ul>
+					<li><b>Algorithm: </b>encryption algorithm for the Password Vault</li>
+					<li><b>Password List Font Size: </b>text size in the password (item) list section (size of the password name and password)</li>
+					<li><b>Lock Screen: </b>lock Password Vault screen when the application goes background (when application is "minimized")</li>
+					<li><b>Show Bottom Menu Bar: </b>show options menu on the bottom of the "folders screen" by default</li>
+				</ul>
+			</li>
+			<li><b>Message Encryptor</b>
+				<ul>
+					<li><b>Algorithm: </b>encryption algorithm for the Message Encryptor</li>
+					<li><b>Hide Info Messages: </b>hide less important pop-up messages (like: <i>message was copied to...</i>)</li>
+				</ul>
+			</li>
+			<li><b>File Encryptor</b>
+				<ul>
+					<li><b>Algorithm: </b>encryption algorithm for the File Encryptor</li>
+					<li><b>Show Root directory: </b>show root directory of this device ("root shortcut" in the File Encryptor)</li>
+					<li><b>Wipe Source After Encryption: </b>delete (with wiping) source files automatically after encryption</li>
+				</ul>
+			</li>
+			<li id="anchor_spec_a"><b>Common Settings</b>
+				<ul>
+					<li><b>Import/Export Path: </b>application import/export directory</li>
+					<li><b>Show Sub-Applications Exit Dialog: </b>confirm return to the main menu (on back button click only, direct "Main Menu" buttons will not be affected)</li>
+					<li><b>Allow Unicode Passwords: </b>Only the ASCII 32-126 characters are allowed for passwords by default ( => compatibility - almost every device/system has sufficient keyboard). If you allow "Unicode Passwords", you can use every character that your keyboard allows.</li>
+					<li><b>Disable Native Code Algorithms: </b>use platform independent version of code only (use only when native code causes problems with this device)</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_b">
+		<h2>B - Save Changes</h2>
+		<ul>
+			<li>save changes and return to the main menu</li>
+		</ul>
+	</div>
+		
+	<div id="toMainMenu" class="gradient"><a href="/sse">&lt;&lt; Back to SSE main menu</a></div>
+	<div id="reserveSpace"></div>
+	<script language="JavaScript">formatPage();</script>
+	
+</body>
+</html>

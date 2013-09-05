@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>Secret Space Encryptor for Android - Šifrování Souborů</title>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="shortcut icon" href="/android_asset/img/sse_favicon.png"></link>
+</head>
+<body>
+	<h1>Šifrování Souborů</h1>
+	
+	<div class="screenShot">
+		<img src="../../img/fileencryptor_SSB.png" usemap="#ScreenShotMap" />
+	</div>
+	
+	<map name="ScreenShotMap">
+		<area shape='rect' coords='57,10,97,50' href="javascript:scrollToElement('anchor_a')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='229,10,269,50' href="javascript:scrollToElement('anchor_b')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='228,111,268,151' href="javascript:scrollToElement('anchor_c')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='226,245,266,285' href="javascript:scrollToElement('anchor_d')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='152,387,192,427' href="javascript:scrollToElement('anchor_e')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='66,387,106,427' href="javascript:scrollToElement('anchor_f')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='3,387,43,427' href="javascript:scrollToElement('anchor_g')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='96,300,136,340' href="javascript:scrollToElement('anchor_h')" tabindex="1" onmouseover="this.focus();"/>		
+	</map>
+	
+	<div><i>pozn.: vzhledem k výsledné velikosti aplikačního balíčku jsou screenshoty ve výchozím jazyce (tedy v angličtině)</i></div><br/>
+	<div class="anchor" id="anchor_a">
+		<h2>A - Dostupné "disky"</h2>
+		<ul>
+			<li>zkratky pro přístup do kořenových adresářů zvolených jednotek </li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_b">
+		<h2>B - Parametry aktuální jednotky</h2>
+		<ul>
+			<li>dostupné místo / velikost jednotky</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_c">
+		<h2>C - Označení souboru/adresáře</h2>
+		<ul>
+			<li>dlouhý klik pro označení <b><i>adresáře</i></b></li>
+			<li>krátký klik pro označení <b><i>souboru</i></b></li>
+			<li><b>Označený adresář/soubor může být:</b>
+				<ul>
+					<li><i><b>Zašifrován nebo Dešifrován</b></i> (podle stavu označeného souboru) tlačítkem <a href="javascript:scrollToElement('anchor_e')">Šifrovat/Dešifrovat (E)</a></li>
+					<li><i><b>Přejmenován, Otevřen, Smazán nebo <a href="javascript:scrollToElement('anchor_more')">Smazán s Wipe</a></b></i> použitím tlačítka "Menu" na zařízení</li>
+					<li><i><b>Pozn.:</b></i> dlouhý klik na <b>soubor</b> nabídne přejmenování/smazání souboru (jako při označení)</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_d">
+		<h2>D - Zašifrovaný soubor</h2>
+		<ul>
+			<li>lze poznat podle: <i>koncovky<b> .enc</b></i>, fialového pozadí a ikony se zámkem</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_e">
+		<h2>E - Tlačítko Šifrovat/Dešifrovat</h2>
+		<ul>
+			<li>zašifruje/dešifruje (podle povahy označené položky) soubor nebo adresář</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_f">
+		<h2>F - Komprimace ON/OFF</h2>
+		<ul>
+			<li>aktivuje/deaktivuje kompresi dat</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_g">
+		<h2>G - Přímo do Hlavního Menu</h2>
+		<ul>
+			<li>přejde přímo do <i><b>Hlavního Menu</b></i> aplikace</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_h">
+		<h2>H - Tlačítko "Více"</h2>
+		<ul>
+			<li>Označený adresář/soubor může být <b>Přejmenován, Smazán, <a href="javascript:scrollToElement('anchor_more')">Smazán s Wipe</a> nebo Otevřen (soubor)</b></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_more">
+		<h2>Více...</h2>
+		<ul>
+			<li>vždy může být označen pouze jeden soubor nebo adresář - pokud chcete šifrovat větší množství souborů, vložte je do společného adresáře</li>
+			<li>proces šifrování/dešifrování může být zastaven tlačítkem "Zpět" na vašem zařízení</li>
+			<li><b>Wiping</b> - data jsou před smazáním fyzicky přepsána (takže je nelze obnovit)</li>
+			<li>
+				<b>Ikony</b><br/>
+				<div class="delimiter">&nbsp;</div>
+				<table class="color">
+					<tr>
+						<td><img src="../../img/icons/directory.png"/></td>
+						<td>Adresář</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/directory_readonly.png"/></td>
+						<td>Adresář - pouze pro čtení</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file.png"/></td>
+						<td>Soubor</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_readonly.png"/></td>
+						<td>Soubor - pouze pro čtení</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_enc.png"/></td>
+						<td>Šifrovaný soubor</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/file_enc_readonly.png"/></td>
+						<td>Šifrovaný soubor - pouze pro čtení</td>
+					</tr>
+					<tr>
+						<td><img src="../../img/icons/back_file.png"/></td>
+						<td>Zpět o úroveň výš</td>
+					</tr>
+				</table>
+				<div class="delimiter">&nbsp;</div>
+			</li>
+			<li><b>Nesprávné heslo</b>
+				<ul>
+					<li>data jsou šifrována za použití zadaného hesla a nelze je dešifrovat jinak, než použitím správného hesla</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="toMainMenu" class="gradient"><a href="/sse/~cs">&lt;&lt; Zpět do hlavního menu aplikace</a></div>
+	<div id="reserveSpace"></div>
+	<script language="JavaScript">formatPage();</script>
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Settings -->
+	<string-array name="settings_categories"> <!-- (ID|Sequence) -->
+		<item>SC_PasswordVault||1</item>
+		<item>SC_MessageEnc||2</item>
+		<item>SC_FileEnc||3</item>
+		<item>SC_Common||4</item>
+    </string-array>	
+    <string-array name="settings_items"> <!-- (CatID|ItemID|Sequence|Type|ValueName|DefaultValue) -->
+		
+		<!-- PasswordVault -->
+		<item>SC_PasswordVault||SI_Algorithm||1||Selector||AES (256 bit)|RC6 (256 bit)|Serpent (256 bit)|Blowfish (256 bit)|Twofish (256 bit)|GOST28147 (256 bit)|Blowfish (448 bit)||0</item>
+		<item>SC_PasswordVault||SI_PasswordListFontSize||2||Selector||70|85|100|115|130||2</item>
+		<item>SC_PasswordVault||SI_LockScreen||3||CheckBox||---||false</item>
+		<item>SC_PasswordVault||SI_ShowMenu||4||CheckBox||---||false</item>
+		
+		<!-- MessageEnc -->
+		<item>SC_MessageEnc||SI_Algorithm||1||Selector||AES (256 bit)|RC6 (256 bit)|Serpent (256 bit)|Blowfish (256 bit)|Twofish (256 bit)|GOST28147 (256 bit)|Blowfish (448 bit)||6</item>
+		<item>SC_MessageEnc||SI_HideInfoMessage||2||CheckBox||---||false</item>
+
+		<!-- FileEnc -->
+		<item>SC_FileEnc||SI_Algorithm||1||Selector||AES (256 bit)|RC6 (256 bit)|Serpent (256 bit)|Blowfish (256 bit)|Twofish (256 bit)|GOST28147 (256 bit)|Blowfish (448 bit)||0</item>
+		<item>SC_FileEnc||SI_ShowRoot||2||CheckBox||---||true</item>
+		<item>SC_FileEnc||SI_WipeSourceFiles||3||CheckBox||---||false</item>
+		
+		<!-- Common parameters -->
+		<item>SC_Common||SI_ImportExportPath||1||Text||---||???</item>
+		<item>SC_Common||SI_AskIfReturnToMainPage||2||CheckBox||---||true</item>
+		<item>SC_Common||SI_AllowUnicodePasswords||3||CheckBox||---||false</item>
+		<item>SC_Common||SI_NativeCodeDisable||4||CheckBox||---||false</item>
+
+    </string-array>
+    <string-array name="settings_comments">
+		<item>SC_PasswordVault||SI_LockScreen||SI_LockScreenComment</item>
+		<item>SC_PasswordVault||SI_ShowMenu||SI_ShowMenuComment</item>
+		<item>SC_MessageEnc||SI_HideInfoMessage||SI_HideInfoMessageComment</item>
+		<item>SC_FileEnc||SI_ShowRoot||SI_ShowRootComment</item>
+		<item>SC_FileEnc||SI_WipeSourceFiles||SI_WipeSourceFilesComment</item>
+		<item>SC_Common||SI_ImportExportPath||SI_ImportExportPathComment</item>
+		<item>SC_Common||SI_AskIfReturnToMainPage||SI_AskIfReturnToMainPageComment</item>
+		<item>SC_Common||SI_ShowApplicationReport||SI_ShowApplicationReportComment</item>
+		<item>SC_Common||SI_AllowUnicodePasswords||SI_AllowUnicodePasswordsComment</item>
+		<item>SC_Common||SI_NativeCodeDisable||SI_NativeCodeDisableComment</item>
+		<!-- <item>SC_Common||SI_SystemErrorLog||SI_SystemErrorLogComment</item> -->
+    </string-array>	
+		
+	<!-- Misc. -->
+	<string name="extdir_list">/sdcard;/extsd;/storage;/mnt;</string>
+	
+	<!-- Help Links -->
+	<string name="helpLink_Main">file:///android_asset/~sse/en/help/index.html</string>
+	<string name="helpLink_PasswordVault">file:///android_asset/~sse/en/help/passwordvault_help.html</string>
+	<string name="helpLink_MessageEncryptor">file:///android_asset/~sse/en/help/messageenc_help.html</string>
+	<string name="helpLink_FileEncryptor">file:///android_asset/~sse/en/help/fileenc_help.html</string>
+	<string name="helpLink_OtherUtils">file:///android_asset/~sse/en/help/otherutils_help.html</string>
+	<string name="helpLink_Settings">file:///android_asset/~sse/en/help/settings_help.html</string>
+	
+</resources>

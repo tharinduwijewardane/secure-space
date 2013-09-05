@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>Secret Space Encryptor for Android - Message Encryptor</title>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="shortcut icon" href="/android_asset/img/sse_favicon.png"></link>
+</head>
+<body>
+	<h1>Message Encryptor</h1>
+	
+	<div class="screenShot">
+		<img src="../../img/messageencryptor_SSB.png" usemap="#ScreenShotMap" />
+	</div>
+	
+	<map name="ScreenShotMap">
+		<area shape='rect' coords='49,68,89,108' href="javascript:scrollToElement('anchor_a')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='50,209,90,249' href="javascript:scrollToElement('anchor_b')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='209,70,249,110' href="javascript:scrollToElement('anchor_c')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='209,145,249,185' href="javascript:scrollToElement('anchor_d')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='209,248,249,288' href="javascript:scrollToElement('anchor_e')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='175,354,215,394' href="javascript:scrollToElement('anchor_f')" tabindex="1" onmouseover="this.focus();"/>
+		<area shape='rect' coords='50,354,90,394' href="javascript:scrollToElement('anchor_g')" tabindex="1" onmouseover="this.focus();"/>		
+	</map>
+	
+	<div class="anchor" id="anchor_a">
+		<h2>A - Copy/Paste Text</h2>
+		<ul>
+			<li><i><b>copy</b></i> the text from the <a href="javascript:scrollToElement('anchor_c')" >Text Area C</a> to the system clipboard</li>
+			<li><i><b>paste</b></i> the text from the system clipboard to the <a href="javascript:scrollToElement('anchor_c')" >Text Area C</a></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_b">
+		<h2>B - Encrypt/Decrypt Text</h2>
+		<ul>
+			<li><i><b>encrypt</b></i> the text in the <a href="javascript:scrollToElement('anchor_c')" >Text Area C</a> and put the result into the<a href="javascript:scrollToElement('anchor_e')" >Text Area E</a></li>
+			<li><i><b>decrypt</b></i> the encrypted text in the <a href="javascript:scrollToElement('anchor_e')" >Text Area E</a> and put in result to the <a href="javascript:scrollToElement('anchor_c')" >Text Area C</a></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_c">
+		<h2>C - Not Encrypted Text Area</h2>
+		<ul>
+			<li>put the text you want to encrypt here</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_d">
+		<h2>D - Set Password Button</h2>
+		<ul>
+			<li>color of this button depends on the current password strength</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_e">
+		<h2>E - Encrypted Text Area</h2>
+		<ul>
+			<li>put the text you want to decrypt here</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_f">
+		<h2>F - More Options Button</h2>
+		<ul>
+			<li><b>Load Message from DB: </b>load a previously saved data from the application database</li>
+			<li><b>Save Message to DB: </b>save data in the <a href="javascript:scrollToElement('anchor_e')" >Text Area E</a> to the application database for later use</li>
+			<li><b>Delete Message from DB: </b>delete selected data from the application database</li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_g">
+		<h2>G - Copy/Paste Encrypted Text</h2>
+		<ul>
+			<li>working just like the <a href="javascript:scrollToElement('anchor_a')" >Buttons A</a>, but with the encrypted text in the <a href="javascript:scrollToElement('anchor_e')" >Text Area E</a></li>
+		</ul>
+	</div>
+	
+	<div class="anchor" id="anchor_more">
+		<h2>More...</h2>
+		<ul>
+			<li><b>Using system clipboard</b>
+				<ul>
+					<li>you can use the messages from this application in <b>every Android application</b> you desire to</li>
+					<li>just long click on the chosen "Edit Text" input field in your application and use build-in <i><b>copy, paste, select, ...</b></i> system features</li>
+				</ul>
+				<br/>
+				<img src="../../img/clipboard_options.png" />
+			</li>
+			<br/>
+			<li><b>Incorrect Password</b>
+				<ul>
+					<li>there is no way to decrypt any message without correct password</li>
+				</ul>
+			</li>			
+		</ul>
+	</div>
+	
+	<div id="toMainMenu" class="gradient"><a href="/sse">&lt;&lt; Back to SSE main menu</a></div>
+	<div id="reserveSpace"></div>
+	<script language="JavaScript">formatPage();</script>
+
+</body>
+</html>

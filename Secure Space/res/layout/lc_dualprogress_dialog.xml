@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:paddingBottom="12dp"
+	android:paddingTop="7dp"
+	>
+	<LinearLayout
+		android:id="@+id/DPBD_main"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+		<TextView
+			android:id="@+id/DPBD_message"
+			android:text="Message"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:paddingBottom="14dp"
+			style="@android:style/TextAppearance.Medium"
+			></TextView>
+		<ProgressBar
+			android:id="@+id/DPBD_progressBarA"
+			android:progressDrawable="@drawable/d_progressbar_gradient"
+			android:layout_width="fill_parent"
+			android:layout_height="17dp" 
+			style="?android:attr/progressBarStyleHorizontal" 
+			android:indeterminateOnly="false" 	
+		    ></ProgressBar>
+		<TextView
+			android:id="@+id/DPBD_progressBarAText"
+			android:text="0%"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:paddingTop="4dp"
+			></TextView>
+	</LinearLayout>
+</RelativeLayout>
