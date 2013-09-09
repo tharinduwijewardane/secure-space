@@ -77,6 +77,11 @@
             android:configChanges="orientation|keyboardHidden"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        <activity
+            android:name="com.tharindu.securespace.FileSelectorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan" >            
+        </activity>
         <activity 
             android:name="com.tharindu.securespace.NFCReceiver" >
             <intent-filter>

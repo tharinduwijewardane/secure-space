@@ -23,8 +23,8 @@ import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
  */
 public abstract class CryptActivity extends Activity {
 
-	Encryptor encryptor;
-	PasswordAttributes passwordAttributes;
+	protected Encryptor encryptor;	//made protected by th
+	protected PasswordAttributes passwordAttributes; //made protected by th
 	private ActivityMessage message;
 	private boolean noCustomTitle = false;
 	private String activitySettingId;

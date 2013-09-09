@@ -20,6 +20,7 @@ import com.paranoiaworks.unicus.android.sse.components.SimpleHTMLDialog;
 import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.FileSelectorActivity;
 import com.tharindu.securespace.ServiceSettingsActivity;
 
 /**
@@ -208,7 +209,7 @@ public class MainActivity extends CryptActivity {
 		    @Override
 		    public void onClick(View v) 
 		    {
-                Intent myIntent = new Intent(v.getContext(), ServiceSettingsActivity.class);
+                Intent myIntent = new Intent(v.getContext(), FileSelectorActivity.class);
                 startActivityForResult(myIntent, 0);
 		    }
 	    }); 
