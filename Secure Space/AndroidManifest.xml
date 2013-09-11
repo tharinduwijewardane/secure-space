@@ -94,6 +94,10 @@
             android:name="com.tharindu.securespace.GPSReceiver">
             
         </service>
+        <service 
+            android:name="com.tharindu.securespace.EncDecManagerServive">
+            
+        </service>
     </application>
 
 </manifest>

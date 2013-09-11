@@ -20,6 +20,7 @@ import com.paranoiaworks.unicus.android.sse.components.SimpleHTMLDialog;
 import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.EncDecManagerServive;
 import com.tharindu.securespace.FileSelectorActivity;
 import com.tharindu.securespace.ServiceSettingsActivity;
 
@@ -38,7 +39,7 @@ public class MainActivity extends CryptActivity {
 	private Button settingsButton;
 	private Button helpButton;
 	private Button exitButton;
-	private Button serviceSettingsButton, selectFilesButton;
+	private Button serviceSettingsButton, selectFilesButton, testButton;
 	private SimpleHTMLDialog simpleHTMLDialog;
 	
 	private LinearLayout containerAL;
@@ -211,6 +212,18 @@ public class MainActivity extends CryptActivity {
 		    {
                 Intent myIntent = new Intent(v.getContext(), FileSelectorActivity.class);
                 startActivityForResult(myIntent, 0);
+		    }
+	    }); 
+	    
+	 // test button by th
+	    this.testButton = (Button)this.findViewById(R.id.bTest_th);
+	    this.testButton.setOnClickListener(new OnClickListener() 
+	    {
+		    @Override
+		    public void onClick(View v) 
+		    {
+                Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
+                startService(myIntent);
 		    }
 	    }); 
 	    
