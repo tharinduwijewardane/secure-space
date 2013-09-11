@@ -14,6 +14,7 @@ public class NFCReceiver extends Activity{
 	private NdefMessage[] msgs;
 	private PreferenceHelp prefHelp;
 	private String filename = ServiceSettingsActivity.filename;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +77,19 @@ public class NFCReceiver extends Activity{
 		if(tagText.equalsIgnoreCase("en"+encTag)){	//if encryptor tag
 			
 			Toast.makeText(getApplicationContext(),"Encryptor tag", Toast.LENGTH_SHORT).show();
+			Intent i = new Intent(getApplicationContext(), EncDecManagerServive.class);
+			i.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
+			i.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
+			startService(i);
 			
 		}else if(tagText.equalsIgnoreCase("en"+decTag)){	//if decryptor tag
 			
 			Toast.makeText(getApplicationContext(),"Decryptor tag", Toast.LENGTH_SHORT).show();
+			Intent i = new Intent(getApplicationContext(), EncDecManagerServive.class);
+			i.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
+			i.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_DECRYPTOR);
+			startService(i);
+			
 		}
 		
 	}

@@ -13,6 +13,10 @@ public class PreferenceHelp {
 	SharedPreferences.Editor editor;
 	Context context;
 	
+	public PreferenceHelp(Context context) {
+		this.filename = "prefs_th";	//default filename hard coded
+		prefData = context.getSharedPreferences(filename, 0);
+	}
 	
 	public PreferenceHelp(Context context, String filename) {
 		this.filename = filename;

@@ -20,6 +20,7 @@ import com.paranoiaworks.unicus.android.sse.components.SimpleHTMLDialog;
 import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.ConstVals;
 import com.tharindu.securespace.EncDecManagerServive;
 import com.tharindu.securespace.FileSelectorActivity;
 import com.tharindu.securespace.ServiceSettingsActivity;
@@ -223,6 +224,8 @@ public class MainActivity extends CryptActivity {
 		    public void onClick(View v) 
 		    {
                 Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
+                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
+                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
                 startService(myIntent);
 		    }
 	    }); 
