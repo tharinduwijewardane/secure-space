@@ -9,6 +9,11 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.widget.Toast;
 
+/**
+ * Activity to receive NFC tag data
+ * @author Tharindu Wijewardane
+ */
+
 public class NFCReceiver extends Activity{
 
 	private NdefMessage[] msgs;

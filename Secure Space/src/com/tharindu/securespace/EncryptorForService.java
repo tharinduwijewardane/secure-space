@@ -76,7 +76,7 @@ import ext.os.utils.Base64;
 
 /**
  * Encryptor Class for Services (avoiding UI interactions) -th 
- * 
+ * @author Tharindu Wijewardane
  */ 
 public class EncryptorForService {
 	

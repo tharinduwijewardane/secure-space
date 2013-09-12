@@ -1,13 +1,16 @@
 package com.tharindu.securespace;
 
-// this class handles the saving and fetching shared preferences
-
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+
+/**
+ * Class to handle the saving and fetching shared preferences
+ * @author Tharindu Wijewardane
+ */
 
 public class PreferenceHelp {
 

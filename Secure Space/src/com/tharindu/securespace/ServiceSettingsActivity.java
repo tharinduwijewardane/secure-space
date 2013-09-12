@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ToggleButton;
 
+/**
+ * Settings related to automatic services
+ * @author Tharindu Wijewardane
+ */
+
 public class ServiceSettingsActivity extends Activity{
 	
 	public static String filename = "prefs_th";		//shared preferences filename

@@ -19,7 +19,7 @@ import com.paranoiaworks.unicus.android.sse.R;
 
 /**
  * Provides "File Row" appearance (for the File Selector)
- * 
+ * @author Tharindu Wijewardane
  */
 public class FileSelectArrayAdapter extends ArrayAdapter<CryptFile> {
 	private final Activity context;

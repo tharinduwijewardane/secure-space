@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.ArrayList;
 import java.util.zip.DataFormatException;
 
 import android.app.IntentService;
@@ -24,6 +25,11 @@ import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
 
+/**
+ * Encryption/Decryption managing service
+ * @author Tharindu Wijewardane
+ */
+
 public class EncDecManagerServive extends IntentService {
 
 	private boolean nativeCodeDisabled;
@@ -39,6 +45,7 @@ public class EncDecManagerServive extends IntentService {
 	private int renderPhase;
 	private String root;
 	private PreferenceHelp prefHelp;
+	private ArrayList<String> selectedFileList;
 
 	/**
 	 * A constructor is required, and must call the super IntentService(String)
@@ -99,9 +106,15 @@ public class EncDecManagerServive extends IntentService {
 		nativeCodeDisabled = settingDataHolder.getItemAsBoolean("SC_Common", "SI_NativeCodeDisable");
 		encryptAlgorithmCode = settingDataHolder.getItemAsInt("SC_FileEnc", "SI_Algorithm");
 		
-		root = Environment.getExternalStorageDirectory().toString(); // define root dir
-		
+		root = Environment.getExternalStorageDirectory().toString(); // define root dir	
 		progressBarToken = new ProgressBarToken();
+		
+		//if the list has been stored in shared preferences
+		if(prefHelp.getPrefList(ConstVals.PREF_KEY_SELECTED_FILES_LIST) != null){
+			selectedFileList = (ArrayList<String>) prefHelp.getPrefList(ConstVals.PREF_KEY_SELECTED_FILES_LIST);
+		}else{
+			selectedFileList = new ArrayList<String>();	//else creates a new list
+		}
 
 		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc");
 
@@ -116,87 +129,94 @@ public class EncDecManagerServive extends IntentService {
 	}
 
 	private void encryptFiles() {
-		startEncDec(true);
+		startEncryptor();
 	}
 
 	private void decryptFiles() {
-		startEncDec(false);
+		startDecryptor();
 	}
 
-	/**  */
-	public void startEncDec(final boolean isEnc) {
+	//start encryptor thread
+	public void startEncryptor() {
 
-		Log.d("-MY-", "before creating encDecThread");
+		Log.d("-MY-", "before starting encThread");
+		encDecThread = new Thread(new Runnable() {
+			public void run() {
+
+				PowerManager.WakeLock wakeLock;
+				PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+				wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "FE");				
+
+				for (String path : selectedFileList) {
+					CryptFile currentFile = new CryptFile(path);
+					
+					wakeLock.acquire();
+					try {
+						Log.d("-MY-", "doEnc path: " + path);
+						doEnc(currentFile);
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						wakeLock.release();
+					}
+				}
+								
+			}
+		});
+
+		// start ENC executor thread
+		encDecThread.start();
+	}
+	
+	//start decryptor thread
+	public void startDecryptor() {
+
+		Log.d("-MY-", "before starting decThread");
 		encDecThread = new Thread(new Runnable() {
 			public void run() {
 
 				PowerManager.WakeLock wakeLock;
 				PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 				wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "FE");
-				wakeLock.acquire();
-
-				try {
-
-					Log.d("-MY-", "before doEnc,doDec");
+				
+				for (String path : selectedFileList) {
 					
-					if (isEnc) {
-						doEnc();
-					} else {
-						doDec();
+					if(!path.endsWith(".enc")){
+						path += ".enc";		//name of the encrypted file
 					}
-					// progressBarToken.getProgressHandler().sendMessage(Message.obtain(progressBarToken.getProgressHandler(),
-					// -200));
-					// } catch (DataFormatException e) {
-					// String message = e.getMessage();
-					// try {message =
-					// getResources().getString(Integer.parseInt(message));}catch(Exception
-					// ie){};
-					// sendPBTMessage(-401, message);
-					// } catch (EncryptorException e) {
-					// String message = e.getMessage();
-					// sendPBTMessage(-401, message);
-					// } catch (InterruptedException e) {
-					// sendPBTMessage(-401, e.getMessage());
-					// } catch (NoSuchAlgorithmException e) {
-					// sendPBTMessage(-401,
-					// getResources().getString(R.string.common_unknownAlgorithm_text));
-				} catch (Exception e) {
-					// sendPBTMessage(-400, e.getMessage());
-					e.printStackTrace();
-				} finally {
-					// progressBarToken.getProgressHandler().sendMessage(Message.obtain(progressBarToken.getProgressHandler(),
-					// -100));
-					wakeLock.release();
+					
+					CryptFile currentFile = new CryptFile(path);
+					
+					wakeLock.acquire();
+					try {
+						Log.d("-MY-", "doEnc path: " + path);
+						doDec(currentFile);
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						wakeLock.release();
+					}
 				}
+				
 			}
 		});
 
-		// start ENC/DEC executor thread
+		// start DEC executor thread
 		encDecThread.start();
 	}
 
 	/** Encrypt selected Folder/File */
-	private synchronized void doEnc() throws Exception {
-		
-		CryptFile inputFile = new CryptFile(selectedItem);
+	private synchronized void doEnc(CryptFile inputFile) throws Exception {
 
 		if (!inputFile.exists()) {
 			throw new FileNotFoundException();
-		}
-
-		// this.sendPBTMessage(FEA_PROGRESSHANDLER_SET_INPUTFILEPATH,
-		// inputFile.getAbsolutePath());
-
+		}	
 		
-		
-		if (!inputFile.isEncrypted()) { // start encryption. if not already
-										// encrypted
+		if (!inputFile.isEncrypted()) { //if not already encrypted
 
 			Log.d("-MY-", "encryption");
 
 			try {
-				// this.sendPBTMessage(FEA_PROGRESSHANDLER_SET_MAINMESSAGE,
-				// "encrypting");
 				long start = System.currentTimeMillis();
 				Log.d("-MY-", "before calling encryptor");
 				encryptorForServices.zipAndEncryptFile(inputFile, compress,	progressBarToken);
@@ -232,23 +252,17 @@ public class EncDecManagerServive extends IntentService {
 	}
 
 	/** Decrypt selected Folder/File */
-	private synchronized void doDec() throws Exception {
-		CryptFile inputFile = new CryptFile(selectedItem);
+	private synchronized void doDec(CryptFile inputFile) throws Exception {
 
 		if (!inputFile.exists()) {
 			throw new FileNotFoundException();
 		}
-
-		// this.sendPBTMessage(FEA_PROGRESSHANDLER_SET_INPUTFILEPATH,
-		// inputFile.getAbsolutePath());
 
 		if (inputFile.isEncrypted()) { // decryption. if already encrypted
 
 			Log.d("-MY-", "decryption");
 
 			try {
-				// this.sendPBTMessage(FEA_PROGRESSHANDLER_SET_MAINMESSAGE,
-				// "decrypting");
 				long start = System.currentTimeMillis();
 				Log.d("-MY-", "before calling decryptor");
 				encryptorForServices.unzipAndDecryptFile(inputFile,	progressBarToken);

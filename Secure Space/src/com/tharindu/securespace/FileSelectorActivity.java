@@ -66,7 +66,7 @@ import com.paranoiaworks.unicus.android.sse.utils.Helpers;
 
 /**
  * File Selector activity class
- * 
+ * @author Tharindu Wijewardane
  */
 public class FileSelectorActivity extends CryptActivity {
 

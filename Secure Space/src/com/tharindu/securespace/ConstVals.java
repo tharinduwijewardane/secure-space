@@ -1,5 +1,10 @@
 package com.tharindu.securespace;
 
+/**
+ * Class for storing constant values
+ * @author Tharindu Wijewardane
+ */
+
 public class ConstVals {
 
 	public static final String REQUESTER_TYPE_KEY = "nfc_or_gps";

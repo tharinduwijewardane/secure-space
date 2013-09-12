@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+/**
+ * Location receiving service
+ * @author Tharindu Wijewardane
+ */
+
 public class GPSReceiver extends Service {
 	
 	private static final String TAG = "-MY-";
