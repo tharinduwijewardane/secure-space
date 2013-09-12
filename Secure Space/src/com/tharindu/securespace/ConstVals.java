@@ -10,4 +10,6 @@ public class ConstVals {
 	public static String TAG_TYPE_ENCRYPTOR = "tag_encryptor";
 	public static String TAG_TYPE_DECRYPTOR = "tag_decryptor";
 	
+	public static final String PREF_KEY_SELECTED_FILES_LIST = "pref_key_selected_files_list";
+	
 }

@@ -14,13 +14,14 @@
 		android:paddingTop="5dp"
 		>
 		<LinearLayout
+		    android:orientation="horizontal"
 			android:id="@+id/FE_topLinearLayout_th"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:layout_alignParentLeft="true"
 			android:layout_toLeftOf="@+id/FE_helpButton_th"
 			></LinearLayout>
-		<Button
+		<!-- <Button
 			android:id="@+id/FE_helpButton_th"
 			android:text=""
 			android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
 			android:layout_alignParentRight="true"
 			style="?android:attr/buttonStyleSmall"
 			android:drawableLeft="@drawable/help_icon_cropped"
-			></Button>
+			></Button> -->
 	</RelativeLayout>
 	<TextView
 		android:id="@+id/FE_topTextView_th"
@@ -69,6 +70,7 @@
 		style="@style/FileEncTextView"
 		></TextView>
 	<LinearLayout
+	    android:orientation="horizontal"
 		android:id="@+id/FE_bottomLinearLayout_th"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
@@ -82,12 +84,12 @@
 			android:layout_height="wrap_content"
 			style="@style/ButtonBackTo"
 			></Button>
-		<Button
+		<!-- <Button
 			android:id="@+id/FE_compressButton_th"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			style="@style/ButtonCompress"
-			></Button>
+			></Button> -->
 		<Button
 			android:id="@+id/FE_setMasterPasswordButton_th"
 			android:layout_width="wrap_content"
@@ -96,16 +98,25 @@
 			android:enabled="false"
 			android:visibility="gone"
 			></Button>
-		<Button
+		 <!-- <Button
 			android:id="@+id/FE_moreButton_th"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:enabled="false"
 			style="@style/ButtonMore"
+			></Button>  -->
+			
+			<Button
+			android:text="Clear List"
+			android:id="@+id/bClearSelectedList"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/ButtonExpander"	
 			></Button>
+			
 		<Button
-			android:text="@string/fe_goButton"
-			android:id="@+id/FE_startbtn"
+			android:text=" "
+			android:id="@+id/bSaveFileList"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			style="@style/ButtonExpander"	

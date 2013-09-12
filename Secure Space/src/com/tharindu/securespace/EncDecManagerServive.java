@@ -252,7 +252,7 @@ public class EncDecManagerServive extends IntentService {
 				long start = System.currentTimeMillis();
 				Log.d("-MY-", "before calling decryptor");
 				encryptorForServices.unzipAndDecryptFile(inputFile,	progressBarToken);
-				Log.d("-MY-", "before calling decryptor");
+				Log.d("-MY-", "after calling decryptor");
 				long time = (System.currentTimeMillis() - start);
 				// SSElog.d("Dec Time: " + time + " : " + !nativeCodeDisabled +
 				// " : " + inputFile.getName() + " : " + inputFile.length());
