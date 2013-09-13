@@ -90,12 +90,13 @@ public class EncDecManagerServive extends IntentService {
 
 	}
 
+	//initialize variables  
 	private void initVariables() {
 		
 		prefHelp = new PreferenceHelp(getApplicationContext()); //instantiating Preference helper class	
-		String password = prefHelp.getPrefString(ServiceSettingsActivity.PREF_KEY_PW); //pw from user settings
+		String password = prefHelp.getPrefString(ConstVals.PREF_KEY_PW); //pw from user settings
 		
-		db = DBHelper.initDB(this.getApplicationContext());
+		db = DBHelper.initDB(this.getApplicationContext()); //needed for settingDataHolder
     	try {
 			while(!DBHelper.isDBReady()) Thread.sleep(100); // can be useful on some systems
 		} catch (InterruptedException e) {
@@ -107,7 +108,7 @@ public class EncDecManagerServive extends IntentService {
 		encryptAlgorithmCode = settingDataHolder.getItemAsInt("SC_FileEnc", "SI_Algorithm");
 		
 		root = Environment.getExternalStorageDirectory().toString(); // define root dir	
-		progressBarToken = new ProgressBarToken();
+		progressBarToken = new ProgressBarToken(); //i have removed the usage of this. but kept for future decisions
 		
 		//if the list has been stored in shared preferences
 		if(prefHelp.getPrefList(ConstVals.PREF_KEY_SELECTED_FILES_LIST) != null){
@@ -116,10 +117,10 @@ public class EncDecManagerServive extends IntentService {
 			selectedFileList = new ArrayList<String>();	//else creates a new list
 		}
 
-		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc");
+//		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc"); //used for testing
 
 		try {
-			encryptorForServices = new EncryptorForService(password);
+			encryptorForServices = new EncryptorForService(password, encryptAlgorithmCode); //initialize encryptor/decryptor
 		} catch (NoSuchAlgorithmException e1) {
 			e1.printStackTrace();
 		} catch (InvalidKeySpecException e1) {

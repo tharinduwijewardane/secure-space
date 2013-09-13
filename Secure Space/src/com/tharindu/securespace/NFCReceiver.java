@@ -22,24 +22,24 @@ public class NFCReceiver extends Activity{
 	
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		
+	protected void onCreate(Bundle savedInstanceState) {	
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 
 		Log.d("-MY-", "on resume");
 
+		//if NDEF (nfc data exchange format) type NFC tag discovered
 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(getIntent().getAction())) {
 
 			Log.d("-MY-", "ACTION_NDEF_DISCOVERED");
 			
 			Intent intent = getIntent();
 
+			//extract NDEF data
 			Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 			if (rawMsgs != null) {
 				msgs = new NdefMessage[rawMsgs.length];
@@ -48,6 +48,7 @@ public class NFCReceiver extends Activity{
 				}
 			}
 
+			//build a string from tag data
 			if (msgs[0] != null) {
 				String result = "";
 				byte[] payload = msgs[0].getRecords()[0].getPayload();
@@ -62,7 +63,7 @@ public class NFCReceiver extends Activity{
 //				Toast.makeText(getApplicationContext(),
 //						"Tag Contains " + result, Toast.LENGTH_SHORT).show();
 				
-				finish();
+				finish(); //finishes activity 
 				
 			}
 
@@ -70,14 +71,15 @@ public class NFCReceiver extends Activity{
 
 	}
 	
+	// checks for known tags (stored encryptor/decryptor tag)
 	private void takeDecision(String tagText){
 		
 		if(prefHelp == null){
 			prefHelp = new PreferenceHelp(getApplicationContext(), filename );
 		}
 		
-		String encTag = prefHelp.getPrefString(ServiceSettingsActivity.PREF_KEY_ENC_TAG);
-		String decTag = prefHelp.getPrefString(ServiceSettingsActivity.PREF_KEY_DEC_TAG);
+		String encTag = prefHelp.getPrefString(ConstVals.PREF_KEY_ENC_TAG);
+		String decTag = prefHelp.getPrefString(ConstVals.PREF_KEY_DEC_TAG);
 		
 		if(tagText.equalsIgnoreCase("en"+encTag)){	//if encryptor tag
 			
@@ -101,7 +103,6 @@ public class NFCReceiver extends Activity{
 
 	@Override
 	protected void onNewIntent(Intent intent) {
-		// TODO Auto-generated method stub
 		super.onNewIntent(intent);
 
 		Log.d("-MY-", "on new intent");

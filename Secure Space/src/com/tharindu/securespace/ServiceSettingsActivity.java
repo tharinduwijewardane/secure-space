@@ -19,11 +19,7 @@ import android.widget.ToggleButton;
 public class ServiceSettingsActivity extends Activity{
 	
 	public static String filename = "prefs_th";		//shared preferences filename
-	public static String PREF_KEY_PW = "pref_key_password";		//key values
-	public static String PREF_KEY_LOCATION_ENABLED = "pref_key_location_enabled";
-	public static String PREF_KEY_NFC_ENABLED = "pref_key_nfc_enabled";
-	public static String PREF_KEY_ENC_TAG = "pref_key_enc_tag";
-	public static String PREF_KEY_DEC_TAG = "pref_key_dec_tag";
+	
 	EditText etPassword;
 	EditText etEncTag;
 	EditText etDecTag;
@@ -85,21 +81,21 @@ public class ServiceSettingsActivity extends Activity{
 
 	void saveValues(){
 		
-		prefHelp.savePref(PREF_KEY_PW, etPassword.getText().toString());
-		prefHelp.savePref(PREF_KEY_LOCATION_ENABLED, tbLocation.isChecked());
-		prefHelp.savePref(PREF_KEY_NFC_ENABLED, tbNFC.isChecked());
-		prefHelp.savePref(PREF_KEY_ENC_TAG, etEncTag.getText().toString());
-		prefHelp.savePref(PREF_KEY_DEC_TAG, etDecTag.getText().toString());
+		prefHelp.savePref(ConstVals.PREF_KEY_PW, etPassword.getText().toString());
+		prefHelp.savePref(ConstVals.PREF_KEY_LOCATION_ENABLED, tbLocation.isChecked());
+		prefHelp.savePref(ConstVals.PREF_KEY_NFC_ENABLED, tbNFC.isChecked());
+		prefHelp.savePref(ConstVals.PREF_KEY_ENC_TAG, etEncTag.getText().toString());
+		prefHelp.savePref(ConstVals.PREF_KEY_DEC_TAG, etDecTag.getText().toString());
 		
 	}
 	
 	void displayValues(){
 		
-		etPassword.setText(prefHelp.getPrefString(PREF_KEY_PW));
-		tbLocation.setChecked(prefHelp.getPrefBool(PREF_KEY_LOCATION_ENABLED));
-		tbNFC.setChecked(prefHelp.getPrefBool(PREF_KEY_NFC_ENABLED));
-		etEncTag.setText(prefHelp.getPrefString(PREF_KEY_ENC_TAG));
-		etDecTag.setText(prefHelp.getPrefString(PREF_KEY_DEC_TAG));
+		etPassword.setText(prefHelp.getPrefString(ConstVals.PREF_KEY_PW));
+		tbLocation.setChecked(prefHelp.getPrefBool(ConstVals.PREF_KEY_LOCATION_ENABLED));
+		tbNFC.setChecked(prefHelp.getPrefBool(ConstVals.PREF_KEY_NFC_ENABLED));
+		etEncTag.setText(prefHelp.getPrefString(ConstVals.PREF_KEY_ENC_TAG));
+		etDecTag.setText(prefHelp.getPrefString(ConstVals.PREF_KEY_DEC_TAG));
 		
 	}
 	
