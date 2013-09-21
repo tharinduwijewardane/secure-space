@@ -117,7 +117,7 @@ public class EncDecManagerServive extends IntentService {
 			selectedFileList = new ArrayList<String>();	//else creates a new list
 		}
 
-//		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc"); //used for testing
+		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc"); //used for testing
 
 		try {
 			encryptorForServices = new EncryptorForService(password, encryptAlgorithmCode); //initialize encryptor/decryptor

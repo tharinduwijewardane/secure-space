@@ -343,12 +343,13 @@ public class FileSelectorActivity extends CryptActivity {
 								}
 
 								setSelectedItem(clickedFile);
+								addToSelectedList(clickedFile);
 								fileSelectArrayAdapter.notifyDataSetChanged();
 
 //								moreButton.setEnabled(true);
 								saveFileListButton.setEnabled(true);
-								saveFileListButton.setText(getResources()
-										.getString(R.string.fe_goButtonEncDir));
+//								saveFileListButton.setText(getResources()
+//										.getString(R.string.fe_goButtonEncDir));
 
 								final String dirPath = clickedFile
 										.getAbsolutePath();

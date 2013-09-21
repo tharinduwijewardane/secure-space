@@ -56,6 +56,7 @@ import sse.org.bouncycastle.crypto.params.ParametersWithIV;
 import sse.org.bouncycastle.crypto.prng.ThreadedSeedGenerator;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import com.paranoiaworks.unicus.android.sse.FileEncActivity;
 import com.paranoiaworks.unicus.android.sse.R;
@@ -511,6 +512,7 @@ public class EncryptorForService {
     /** Compress and Encrypt File/Directory */
 	public synchronized long zipAndEncryptFile(File inputFile, boolean compress, ProgressBarToken progressBarToken) throws IOException, InterruptedException, NoSuchAlgorithmException, NoSuchProviderException, InvalidKeyException, InvalidAlgorithmParameterException, DataFormatException 
     {
+		
     	long processTime = Calendar.getInstance().getTimeInMillis();
     	boolean nativeCode = isEncNativeCodeAvailable();
 		
@@ -562,8 +564,13 @@ public class EncryptorForService {
 			zipSingleFile(inputFile, zipOutputStream, BUFFER, compress, null);
 		}
 		else if(inputFile.isDirectory()) {
-			long sizeCounter = this.zipDir(inputFile, zipOutputStream, BUFFER, compress, null);
+			
+			Log.d("-MY-", "is dir");
+			
+//			long sizeCounter = this.zipDir(inputFile, zipOutputStream, BUFFER, compress, null);
+			this.zipDir(inputFile, zipOutputStream, BUFFER, compress, null);
 			//Log.v("DIRSIZE: ", "" + sizeCounter + " : " + Helpers.getDirectorySize(inputFile));
+			
 		}
 		
 		//zipOutputStream.flush();
@@ -618,19 +625,20 @@ public class EncryptorForService {
 	}
 	
 	/** Extension of zipAndEncryptFile Method */
-    private long zipDir(File dir, ZipArchiveOutputStream zos, final int BUFFER, boolean compress, Handler progressHandler) throws IOException, InterruptedException, DataFormatException
+    private void zipDir(File dir, ZipArchiveOutputStream zos, final int BUFFER, boolean compress, Handler progressHandler) throws IOException, InterruptedException, DataFormatException
     {
     	String originalPath = dir.getAbsolutePath().replace(dir.getName(), "");
     	ProgressMessage hm = new ProgressMessage();
         if(compress)hm.setFullSize(Helpers.getDirectorySize(dir));
         else hm.setFullSize((long)((CRC_TIMECOEF + 1) * Helpers.getDirectorySize(dir)));
     	if(hm.getFullSize() == 0) throw new DataFormatException("Selected Folder size is 0");
-    	hm.setProgressAbs(0);
-    	return zipDir(dir, zos, BUFFER, originalPath, compress, hm, progressHandler);
+//    	hm.setProgressAbs(0);
+    	Log.d("-MY-", "zipDir 1");
+    	zipDir(dir, zos, BUFFER, originalPath, compress, hm, progressHandler);
     }
     
     /** Extension of zipAndEncryptFile Method */
-    private long zipDir(File dir, ZipArchiveOutputStream zos, final int BUFFER, String originalPath, boolean compress, ProgressMessage hm, Handler progressHandler) throws IOException, InterruptedException 
+    private void zipDir(File dir, ZipArchiveOutputStream zos, final int BUFFER, String originalPath, boolean compress, ProgressMessage hm, Handler progressHandler) throws IOException, InterruptedException 
 	{ 
 		String[] dirList = dir.list();
 		byte[] readBuffer = new byte[BUFFER]; 
@@ -638,10 +646,14 @@ public class EncryptorForService {
 		
 		for(int i = 0; i < dirList.length; i++)
 		{ 
+			Log.d("-MY-", "file list inside dir: "+dirList[i]);
+			
 			File f = new File(dir, dirList[i]);
 			
 			String tempPath = f.getAbsolutePath().substring(originalPath.length(), f.getAbsolutePath().length());
 			ZipArchiveEntry anEntry = null;
+			
+			Log.d("-MY-", "inside file path: "+tempPath);
 			
 			if(f.isDirectory()) 
 	        { 
@@ -663,7 +675,7 @@ public class EncryptorForService {
 			anEntry.setTime(f.lastModified());
 			if(!compress) // STORED ONLY
 			{
-				anEntry.setCompressedSize(f.length());;
+				anEntry.setCompressedSize(f.length());
 				anEntry.setCrc(getCRC32(f, progressHandler, hm));
 			}
 	        zos.putArchiveEntry(anEntry); 
@@ -675,16 +687,17 @@ public class EncryptorForService {
 	        while((bytesIn = origin.read(readBuffer)) != -1) 
 	        {        	
 	        	zos.write(readBuffer, 0, bytesIn);
-	        	hm.setProgressAbs(hm.getProgressAbs() + bytesIn);
+//	        	hm.setProgressAbs(hm.getProgressAbs() + bytesIn);
 	        	
-	        	if(!hm.isRelSameAsLast()) progressHandler.sendMessage(Message.obtain(progressHandler, -1100, hm));
+//	        	if(!hm.isRelSameAsLast()) progressHandler.sendMessage(Message.obtain(progressHandler, -1100, hm));
 	        	checkThreadInterruption();
 	        } 
 	        zos.closeArchiveEntry();
 	        origin.close();
 	        fis.close();
 	    }
-		return hm.getProgressAbs();
+		Log.d("-MY-", "end of zipDir 2");
+//		return hm.getProgressAbs();
 	}
     
     /** Decompress and Decrypt File (one pass) */
@@ -1130,8 +1143,8 @@ public class EncryptorForService {
 		while ((crcRead = crcBis.read(crcBuffer)) != -1) {
 			crc.update(crcBuffer, 0, crcRead);
 			
-			hm.setProgressAbs(hm.getProgressAbs() + (long)(CRC_TIMECOEF * crcRead));
-			if(!hm.isRelSameAsLast()) progressHandler.sendMessage(Message.obtain(progressHandler, -1100, hm));
+//			hm.setProgressAbs(hm.getProgressAbs() + (long)(CRC_TIMECOEF * crcRead));
+//			if(!hm.isRelSameAsLast()) progressHandler.sendMessage(Message.obtain(progressHandler, -1100, hm));
 			checkThreadInterruption();
 		}
 		crcBis.close();
