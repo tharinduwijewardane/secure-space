@@ -31,7 +31,7 @@ import android.os.Message;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.StaticApp;
 import com.paranoiaworks.unicus.android.sse.dao.SettingDataHolder;
 import com.paranoiaworks.unicus.android.sse.misc.ProgressBarToken;

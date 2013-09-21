@@ -14,6 +14,7 @@ import com.paranoiaworks.unicus.android.sse.dao.PasswordAttributes;
 import com.paranoiaworks.unicus.android.sse.dao.SettingDataHolder;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
+import com.tharindu.securespace.R;
 
 /**
  * Base parent class for other activities

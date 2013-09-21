@@ -60,6 +60,7 @@ import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.R;
 
 /**
  * Password Vault activity class

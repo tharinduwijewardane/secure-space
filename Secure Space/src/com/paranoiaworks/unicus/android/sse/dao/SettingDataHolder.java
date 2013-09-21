@@ -12,7 +12,7 @@ import java.util.Map;
 import android.content.Context;
 import android.content.res.Resources;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 

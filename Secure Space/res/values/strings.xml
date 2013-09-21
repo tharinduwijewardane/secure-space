@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">S.S.E.</string>
-    <string name="app_name_full">Secret Space Encryptor</string>
+    <string name="app_name">Secure Space</string>
+    <string name="app_name_full">Secure Space</string>
 
     <!-- Common -->
     <string name="common_app_passwordVault_name">Password Vault</string>

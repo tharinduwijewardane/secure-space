@@ -12,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.utils.ColorHelper.ColorBean;
 
 /**

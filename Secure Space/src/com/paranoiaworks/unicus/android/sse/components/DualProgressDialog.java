@@ -6,8 +6,7 @@ import android.text.Spanned;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 /**
  * Simple Progress Dialog

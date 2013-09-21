@@ -61,6 +61,7 @@ import com.paranoiaworks.unicus.android.sse.misc.ProgressMessage;
 import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.R;
 
 /**
  * File Encryptor activity class

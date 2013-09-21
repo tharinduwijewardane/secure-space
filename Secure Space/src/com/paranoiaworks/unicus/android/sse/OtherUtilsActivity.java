@@ -33,6 +33,7 @@ import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor.AlgorithmBean;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
+import com.tharindu.securespace.R;
 
 /**
  * Other Utils activity class

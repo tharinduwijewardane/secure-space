@@ -18,7 +18,7 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
 import com.paranoiaworks.unicus.android.sse.CryptActivity;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.adapters.BasicListAdapter;
 import com.paranoiaworks.unicus.android.sse.dao.ActivityMessage;
 import com.paranoiaworks.unicus.android.sse.dao.SettingDataHolder;

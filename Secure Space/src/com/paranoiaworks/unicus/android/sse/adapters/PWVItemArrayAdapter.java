@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.dao.SettingDataHolder;
 import com.paranoiaworks.unicus.android.sse.dao.VaultItem;
 import com.paranoiaworks.unicus.android.sse.utils.ColorHelper;

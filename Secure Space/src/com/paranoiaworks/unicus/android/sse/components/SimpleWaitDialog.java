@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 /**
  * Simple "Rotating wheels" Wait Dialog

@@ -13,7 +13,7 @@ import android.widget.Gallery.LayoutParams;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 /**
  * Provides "Text under Folder icon" appearance for Vault object

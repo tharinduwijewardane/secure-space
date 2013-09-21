@@ -3,7 +3,7 @@ package com.paranoiaworks.unicus.android.sse.dao;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 /**
  * Support password related atributes

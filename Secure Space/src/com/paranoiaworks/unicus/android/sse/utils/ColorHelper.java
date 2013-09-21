@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.graphics.Color;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 /**
  * Provides icons and other resources for chosen color (android.graphics.Color)

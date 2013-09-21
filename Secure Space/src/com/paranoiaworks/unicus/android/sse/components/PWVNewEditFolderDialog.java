@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.paranoiaworks.unicus.android.sse.CryptActivity;
 import com.paranoiaworks.unicus.android.sse.PasswordVaultActivity;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.adapters.BasicListAdapter;
 import com.paranoiaworks.unicus.android.sse.adapters.ColorListAdapter;
 import com.paranoiaworks.unicus.android.sse.dao.ActivityMessage;

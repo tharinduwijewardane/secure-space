@@ -1,7 +1,6 @@
 package com.tharindu.securespace;
 
-import com.paranoiaworks.unicus.android.sse.R;
-import com.paranoiaworks.unicus.android.sse.R.layout;
+import com.tharindu.securespace.R;
 
 import android.os.Bundle;
 import android.app.Activity;

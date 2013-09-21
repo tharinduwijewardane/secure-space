@@ -1,6 +1,6 @@
 package com.paranoiaworks.unicus.android.sse.components;
 
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import android.app.Activity;
 import android.text.Html;
 import android.view.LayoutInflater;

@@ -23,6 +23,7 @@ import com.paranoiaworks.unicus.android.sse.utils.Helpers;
 import com.tharindu.securespace.ConstVals;
 import com.tharindu.securespace.EncDecManagerServive;
 import com.tharindu.securespace.FileSelectorActivity;
+import com.tharindu.securespace.R;
 import com.tharindu.securespace.ServiceSettingsActivity;
 
 /**

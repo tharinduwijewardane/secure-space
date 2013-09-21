@@ -48,7 +48,7 @@ import android.widget.Toast;
 
 import com.paranoiaworks.unicus.android.sse.CryptActivity;
 import com.paranoiaworks.unicus.android.sse.PasswordVaultActivity;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.components.DualProgressDialog;
 import com.paranoiaworks.unicus.android.sse.components.ImageToast;
 import com.paranoiaworks.unicus.android.sse.components.PasswordDialog;

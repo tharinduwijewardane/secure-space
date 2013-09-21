@@ -59,7 +59,7 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.paranoiaworks.unicus.android.sse.FileEncActivity;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 import com.paranoiaworks.unicus.android.sse.StaticApp;
 import com.paranoiaworks.unicus.android.sse.misc.CheckCodeParserInputStream;
 import com.paranoiaworks.unicus.android.sse.misc.CipherInputStreamPI;

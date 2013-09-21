@@ -37,6 +37,7 @@ import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor.AlgorithmBean;
 import com.paranoiaworks.unicus.android.sse.utils.Helpers;
 import com.paranoiaworks.unicus.android.sse.utils.SSElog;
+import com.tharindu.securespace.R;
 
 /**
  * Settings activity class

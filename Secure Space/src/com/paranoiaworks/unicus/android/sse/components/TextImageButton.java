@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.paranoiaworks.unicus.android.sse.R;
+import com.tharindu.securespace.R;
 
 
 // TODO - not used

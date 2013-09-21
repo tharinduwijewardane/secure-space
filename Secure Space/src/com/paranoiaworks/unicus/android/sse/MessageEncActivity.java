@@ -27,6 +27,7 @@ import com.paranoiaworks.unicus.android.sse.dao.PasswordAttributes;
 import com.paranoiaworks.unicus.android.sse.utils.ComponentProvider;
 import com.paranoiaworks.unicus.android.sse.utils.DBHelper;
 import com.paranoiaworks.unicus.android.sse.utils.Encryptor;
+import com.tharindu.securespace.R;
 
 /**
  * Message Encryptor activity class
