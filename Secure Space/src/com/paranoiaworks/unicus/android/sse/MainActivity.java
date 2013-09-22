@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,6 +24,7 @@ import com.paranoiaworks.unicus.android.sse.utils.Helpers;
 import com.tharindu.securespace.ConstVals;
 import com.tharindu.securespace.EncDecManagerServive;
 import com.tharindu.securespace.FileSelectorActivity;
+import com.tharindu.securespace.MapActivity;
 import com.tharindu.securespace.R;
 import com.tharindu.securespace.ServiceSettingsActivity;
 
@@ -224,10 +226,13 @@ public class MainActivity extends CryptActivity {
 		    @Override
 		    public void onClick(View v) 
 		    {
-                Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
-                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
-                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
-                startService(myIntent);
+//                Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
+//                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
+//                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
+//                startService(myIntent);
+		    	Intent myIntent = new Intent(v.getContext(), MapActivity.class);
+		    	startActivityForResult(myIntent, 0);
+		    	Log.d("-MY-", "map");
 		    }
 	    }); 
 	    
