@@ -4,6 +4,9 @@
     <string name="app_name">Secure Space</string>
     <string name="app_name_full">Secure Space</string>
 
+    <!-- th Map Activity -->
+    <string name="instructions">\tLong click on map to place the marker\n\tLong click on marker to drag it</string>
+    
     <!-- Common -->
     <string name="common_app_passwordVault_name">Password Vault</string>
     <string name="common_app_messageEncryptor_name">Message Encryptor</string>

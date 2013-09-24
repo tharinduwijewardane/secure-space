@@ -37,6 +37,10 @@ public class PreferenceHelp {
 		return (int) Double.parseDouble(prefData.getString(key, "0"));
 	}
 	
+	public double getPrefDouble(String key){
+		return Double.parseDouble(prefData.getString(key, "0"));
+	}
+	
 	public boolean getPrefBool(String key){
 		return prefData.getBoolean(key, true);
 	}
@@ -64,6 +68,12 @@ public class PreferenceHelp {
 	}
 
 	public void savePref(String key, int value) {
+		editor = prefData.edit();
+		editor.putString(key, String.valueOf(value));
+		editor.commit();
+	}
+	
+	public void savePref(String key, double value) {
 		editor = prefData.edit();
 		editor.putString(key, String.valueOf(value));
 		editor.commit();

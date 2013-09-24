@@ -26,4 +26,8 @@ public class ConstVals {
 	
 	public static final String PREF_KEY_SELECTED_FILES_LIST = "pref_key_selected_files_list";
 	
+	//map
+	public static final String PREF_KEY_LAT = "pref_key_lat";
+	public static final String PREF_KEY_LON = "pref_key_lon";
+	
 }
