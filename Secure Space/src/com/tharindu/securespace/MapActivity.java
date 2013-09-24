@@ -38,8 +38,7 @@ import android.widget.Toast;
 
 /**
  * Map for selecting allowed locations
- * @author Tharindu Wijewardane 
- * 
+ * @author Tharindu Wijewardane
  */
 
 public class MapActivity extends FragmentActivity implements
