@@ -3,29 +3,90 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/d_black" >
+    
+    <LinearLayout
+        android:id="@+id/S_bottomButtons_th"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dialogButtonsBackground"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp" >
 
+        <Button
+            android:id="@+id/bHelpButton_th"
+            style="@style/ButtonHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" >
+        </Button>
+
+        <Button
+            android:id="@+id/bSaveButton_th"
+            style="@style/ButtonExpander"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_saveSettings" >
+        </Button>
+    </LinearLayout>
+    
     <ScrollView
         android:id="@+id/S_settingsListScroll_th"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/S_bottomButtons"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="top" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/S_bottomButtons_th" >
 
         <LinearLayout
             android:id="@+id/S_settingsList_th"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingRight="0dp" >
+            
+            <TextView
+                style="@style/TextViewTitleBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="File State" />
+            
+            <TextView
+                android:id="@+id/tvFileState"
+                style="@style/TextViewTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="testing" />
 
+            <TextView
+                style="@style/TextViewTitleBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Passwords" />
+            
+            <TextView
+                android:id="@+id/tvLoginPassword_th"
+                style="@style/TextViewTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Login Password" />
+            
+            <EditText
+                android:id="@+id/etLoginPassword_th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+            
             <TextView
                 android:id="@+id/tvPassword_th"
                 style="@style/TextViewTitleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Password" />
+                android:text="Encryption Password" />
 
             <EditText
                 android:id="@+id/etPassword_th"
@@ -139,32 +200,6 @@
                 android:ems="10" >
             </EditText>
         </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/S_bottomButtons_th"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/dialogButtonsBackground"
-        android:gravity="center_vertical"
-        android:paddingTop="5dp" >
-
-        <Button
-            android:id="@+id/bHelpButton_th"
-            style="@style/ButtonHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" >
-        </Button>
-
-        <Button
-            android:id="@+id/bSaveButton_th"
-            style="@style/ButtonExpander"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/s_saveSettings" >
-        </Button>
-    </LinearLayout>
+    </ScrollView>  
 
 </RelativeLayout>

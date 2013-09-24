@@ -86,6 +86,13 @@ public class EncDecManagerServive extends IntentService {
 			
 		}else if(requesterType.equalsIgnoreCase(ConstVals.REQUEST_FROM_GPS)){ //intent comimg from GPS section
 			
+			String commandType = intent.getStringExtra(ConstVals.COMMAND_TYPE_KEY);
+			if(commandType.equalsIgnoreCase(ConstVals.COMMAND_TYPE_ENCRYPT)){	//encrypt command
+				encryptFiles();
+			}else if(commandType.equalsIgnoreCase(ConstVals.COMMAND_TYPE_DECRYPT)){ //decrypt command
+				decryptFiles();
+			}
+			
 		}
 
 	}
@@ -161,6 +168,9 @@ public class EncDecManagerServive extends IntentService {
 						wakeLock.release();
 					}
 				}
+				
+				//save state of the selected files
+				prefHelp.savePref(ConstVals.PREF_KEY_IS_ENCRYPTED, true);
 								
 			}
 		});
@@ -198,6 +208,9 @@ public class EncDecManagerServive extends IntentService {
 						wakeLock.release();
 					}
 				}
+				
+				//save state of the selected files
+				prefHelp.savePref(ConstVals.PREF_KEY_IS_ENCRYPTED, false);
 				
 			}
 		});

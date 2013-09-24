@@ -513,7 +513,7 @@ containing a value of this type.
         public static final int SHD_scrollView=0x7f0700ad;
         public static final int SHD_webView=0x7f0700ae;
         public static final int S_bottomButtons=0x7f070060;
-        public static final int S_bottomButtons_th=0x7f0700de;
+        public static final int S_bottomButtons_th=0x7f0700d4;
         public static final int S_comment=0x7f0700ba;
         public static final int S_helpButton=0x7f070062;
         public static final int S_itemImage=0x7f0700b8;
@@ -523,7 +523,7 @@ containing a value of this type.
         public static final int S_settingsList=0x7f070061;
         public static final int S_settingsListScroll=0x7f07005f;
         public static final int S_settingsListScroll_th=0x7f0700cc;
-        public static final int S_settingsList_th=0x7f0700d4;
+        public static final int S_settingsList_th=0x7f0700d7;
         public static final int S_value=0x7f0700bb;
         public static final int TopWrapper=0x7f070039;
         public static final int VWD_button=0x7f0700b6;
@@ -531,13 +531,13 @@ containing a value of this type.
         public static final int VWD_text=0x7f0700b4;
         public static final int WD_image=0x7f0700b0;
         public static final int WD_title=0x7f0700af;
-        public static final int action_settings=0x7f0700e1;
+        public static final int action_settings=0x7f0700e4;
         public static final int app_title=0x7f0700bc;
         public static final int app_title_right=0x7f0700be;
         public static final int bClearSelectedList=0x7f0700ca;
-        public static final int bHelpButton_th=0x7f0700df;
+        public static final int bHelpButton_th=0x7f0700d5;
         public static final int bLogin_th=0x7f0700ce;
-        public static final int bSaveButton_th=0x7f0700e0;
+        public static final int bSaveButton_th=0x7f0700d6;
         public static final int bSaveFileList=0x7f0700cb;
         public static final int bSelectfiles_th=0x7f07001b;
         public static final int bSettings_th=0x7f070019;
@@ -545,11 +545,12 @@ containing a value of this type.
         public static final int cancelButton=0x7f0700a9;
         public static final int cbMyLocInfo=0x7f0700cf;
         public static final int enteredText=0x7f0700a6;
-        public static final int etAllowedLocation_th=0x7f0700d8;
-        public static final int etDecTag_th=0x7f0700dd;
-        public static final int etEncTag_th=0x7f0700db;
+        public static final int etAllowedLocation_th=0x7f0700de;
+        public static final int etDecTag_th=0x7f0700e3;
+        public static final int etEncTag_th=0x7f0700e1;
+        public static final int etLoginPassword_th=0x7f0700da;
         public static final int etPassLogin_th=0x7f0700cd;
-        public static final int etPassword_th=0x7f0700d6;
+        public static final int etPassword_th=0x7f0700dc;
         public static final int hybrid=0x7f070004;
         public static final int iconImagePW=0x7f07007e;
         public static final int iconTextPW=0x7f07007f;
@@ -560,18 +561,20 @@ containing a value of this type.
         public static final int normal=0x7f070001;
         public static final int okButton=0x7f0700a8;
         public static final int satellite=0x7f070002;
-        public static final int tbLocation_th=0x7f0700d7;
-        public static final int tbNFC_th=0x7f0700d9;
+        public static final int tbLocation_th=0x7f0700dd;
+        public static final int tbNFC_th=0x7f0700df;
         public static final int terrain=0x7f070003;
         public static final int text=0x7f070064;
         public static final int title=0x7f0700bd;
         public static final int toast_layout_a=0x7f0700b3;
-        public static final int tvDecTag_th=0x7f0700dc;
-        public static final int tvEncTag_th=0x7f0700da;
+        public static final int tvDecTag_th=0x7f0700e2;
+        public static final int tvEncTag_th=0x7f0700e0;
+        public static final int tvFileState=0x7f0700d8;
         public static final int tvLat=0x7f0700d1;
+        public static final int tvLoginPassword_th=0x7f0700d9;
         public static final int tvLon=0x7f0700d2;
         public static final int tvMapMsg=0x7f0700d0;
-        public static final int tvPassword_th=0x7f0700d5;
+        public static final int tvPassword_th=0x7f0700db;
         public static final int vaultLayoutSwitcher=0x7f070040;
     }
     public static final class layout {
