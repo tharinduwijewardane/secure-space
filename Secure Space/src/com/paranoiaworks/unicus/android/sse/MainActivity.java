@@ -230,9 +230,7 @@ public class MainActivity extends CryptActivity {
 //                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
 //                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
 //                startService(myIntent);
-		    	Intent myIntent = new Intent(v.getContext(), MapActivity.class);
-		    	startActivityForResult(myIntent, 0);
-		    	Log.d("-MY-", "map");
+		    	
 		    }
 	    }); 
 	    

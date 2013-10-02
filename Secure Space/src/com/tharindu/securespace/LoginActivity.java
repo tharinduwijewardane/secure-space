@@ -20,7 +20,7 @@ public class LoginActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.th_la_login);
 		
-		loginPass = (EditText) findViewById(R.id.etPassLogin_th);
+		loginPass = (EditText) findViewById(R.id.etEnterLoginPass_th);
 		login = (Button) findViewById(R.id.bLogin_th);
 		login.setOnClickListener(new OnClickListener() {
 			

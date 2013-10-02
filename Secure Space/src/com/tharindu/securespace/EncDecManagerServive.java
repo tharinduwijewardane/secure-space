@@ -101,7 +101,7 @@ public class EncDecManagerServive extends IntentService {
 	private void initVariables() {
 		
 		prefHelp = new PreferenceHelp(getApplicationContext()); //instantiating Preference helper class	
-		String password = prefHelp.getPrefString(ConstVals.PREF_KEY_PW); //pw from user settings
+		String password = prefHelp.getPrefString(ConstVals.PREF_KEY_PASSWORD); //pw from user settings
 		
 		db = DBHelper.initDB(this.getApplicationContext()); //needed for settingDataHolder
     	try {
@@ -170,7 +170,7 @@ public class EncDecManagerServive extends IntentService {
 				}
 				
 				//save state of the selected files
-				prefHelp.savePref(ConstVals.PREF_KEY_IS_ENCRYPTED, true);
+				prefHelp.savePref(ConstVals.PREF_KEY_ARE_FILES_ENCRYPTED, true);
 								
 			}
 		});
@@ -210,7 +210,7 @@ public class EncDecManagerServive extends IntentService {
 				}
 				
 				//save state of the selected files
-				prefHelp.savePref(ConstVals.PREF_KEY_IS_ENCRYPTED, false);
+				prefHelp.savePref(ConstVals.PREF_KEY_ARE_FILES_ENCRYPTED, false);
 				
 			}
 		});

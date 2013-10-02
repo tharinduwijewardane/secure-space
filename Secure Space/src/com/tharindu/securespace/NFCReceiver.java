@@ -2,6 +2,7 @@ package com.tharindu.securespace;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.ExifInterface;
 import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
@@ -14,8 +15,12 @@ import android.widget.Toast;
  * @author Tharindu Wijewardane
  */
 
-public class NFCReceiver extends Activity{
+/* an activity is used here because android doesn't support 
+ * getting an intent to a service when a NFC tag discovered. 
+ * And there is no broadcast receiver for NFC tag discovering */
 
+public class NFCReceiver extends Activity{
+	
 	private NdefMessage[] msgs;
 	private PreferenceHelp prefHelp;
 	private String filename = ServiceSettingsActivity.filename;
@@ -24,6 +29,11 @@ public class NFCReceiver extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {	
 		super.onCreate(savedInstanceState);
+		
+		if(prefHelp == null){
+			prefHelp = new PreferenceHelp(getApplicationContext(), filename );
+		}
+		
 	}
 
 	@Override
@@ -31,10 +41,17 @@ public class NFCReceiver extends Activity{
 		super.onResume();
 
 		Log.d("-MY-", "on resume");
+		
+		//exit if enc/dec based on NFC is not enabled by user
+		if(! prefHelp.getPrefBool(ConstVals.PREF_KEY_NFC_ENABLED)){
+			Log.d("-MY-", "enc/dec based on NFC not enabled in settings");
+			finish();
+			return;
+		}
 
 		//if NDEF (nfc data exchange format) type NFC tag discovered
-		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(getIntent().getAction())) {
-
+		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(getIntent().getAction())) {						
+			
 			Log.d("-MY-", "ACTION_NDEF_DISCOVERED");
 			
 			Intent intent = getIntent();
@@ -61,22 +78,20 @@ public class NFCReceiver extends Activity{
 				
 //				Log.d("-MY-", "before toast");
 //				Toast.makeText(getApplicationContext(),
-//						"Tag Contains " + result, Toast.LENGTH_SHORT).show();
-				
-				finish(); //finishes activity 
+//						"Tag Contains " + result, Toast.LENGTH_SHORT).show();			 
 				
 			}
 
 		}
-
+		
+		/* finishes activity at the end of work. 
+		 * becoz this activity is not used for user interaction */
+		finish();
+		return;
 	}
 	
 	// checks for known tags (stored encryptor/decryptor tag)
-	private void takeDecision(String tagText){
-		
-		if(prefHelp == null){
-			prefHelp = new PreferenceHelp(getApplicationContext(), filename );
-		}
+	private void takeDecision(String tagText){		
 		
 		String encTag = prefHelp.getPrefString(ConstVals.PREF_KEY_ENC_TAG);
 		String decTag = prefHelp.getPrefString(ConstVals.PREF_KEY_DEC_TAG);
@@ -108,6 +123,5 @@ public class NFCReceiver extends Activity{
 		Log.d("-MY-", "on new intent");
 		
 	}
-
 	
 }

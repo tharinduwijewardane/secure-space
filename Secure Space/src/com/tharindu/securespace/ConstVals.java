@@ -8,12 +8,13 @@ package com.tharindu.securespace;
 public class ConstVals {
 	
 	//preference keys
-	public static final String PREF_KEY_PW = "pref_key_password";
+	public static final String PREF_KEY_PASSWORD = "pref_key_password";
+	public static final String PREF_KEY_LOGIN_PASSWORD = "pref_key_login_password";
 	public static final String PREF_KEY_LOCATION_ENABLED = "pref_key_location_enabled";
 	public static final String PREF_KEY_NFC_ENABLED = "pref_key_nfc_enabled";
 	public static final String PREF_KEY_ENC_TAG = "pref_key_enc_tag";
 	public static final String PREF_KEY_DEC_TAG = "pref_key_dec_tag";
-	public static final String PREF_KEY_IS_ENCRYPTED = "pref_key_is_encrypted";
+	public static final String PREF_KEY_ARE_FILES_ENCRYPTED = "pref_key_is_encrypted";
 
 	//intent source
 	public static final String REQUESTER_TYPE_KEY = "nfc_or_gps";

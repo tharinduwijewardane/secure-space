@@ -19,7 +19,7 @@
             android:paddingRight="0dp" >
 
             <EditText
-                android:id="@+id/etPassLogin_th"
+                android:id="@+id/etEnterLoginPass_th"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
