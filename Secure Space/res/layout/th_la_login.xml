@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/d_black" >
+    android:layout_height="fill_parent" >
 
     <ScrollView
         android:id="@+id/S_settingsListScroll_th"
@@ -16,24 +15,34 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:paddingRight="0dp" >
+            android:padding="5dp" >
+            
+            <TextView 
+                android:id="@+id/tvLoginFeedback"
+               	android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" 
+                android:text=" " />
 
             <EditText
                 android:id="@+id/etEnterLoginPass_th"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:gravity="center"
                 android:ems="12"
-                android:hint="login password" >
+                android:inputType="textWebPassword"
+                android:hint="Enter Login Password" >
             </EditText>
             
             <Button
             android:id="@+id/bLogin_th"
-            style="@style/ButtonExpander"
-            android:layout_width="fill_parent"
+            style="@style/ButtonSettings"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Login" />
+            android:layout_marginTop="5dp"
+            android:text=" Login " />
             
         </LinearLayout>
     </ScrollView>

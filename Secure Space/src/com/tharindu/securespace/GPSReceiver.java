@@ -133,7 +133,7 @@ public class GPSReceiver extends Service {
 		double distance = distance(lat1, lng1, lat2, lng2);
 		Log.d("-MY-", "distance: "+distance);
 		boolean filesEncrypted = prefHelp.getPrefBool(ConstVals.PREF_KEY_ARE_FILES_ENCRYPTED);
-		Log.d("-MY-", "pref key is encrypted: "+filesEncrypted);
+		Log.d("-MY-", "file state. encrypted? : "+filesEncrypted);
 		
 		if(filesEncrypted && distance < 20){ 
 			//if files in encrypted state and user in allowed zone
