@@ -220,19 +220,19 @@ public class MainActivity extends CryptActivity {
 	    }); 
 	    
 	 // test button by th
-	    this.testButton = (Button)this.findViewById(R.id.bTest_th);
-	    this.testButton.setOnClickListener(new OnClickListener() 
-	    {
-		    @Override
-		    public void onClick(View v) 
-		    {
-//                Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
-//                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
-//                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
-//                startService(myIntent);
-		    	
-		    }
-	    }); 
+//	    this.testButton = (Button)this.findViewById(R.id.bTest_th);
+//	    this.testButton.setOnClickListener(new OnClickListener() 
+//	    {
+//		    @Override
+//		    public void onClick(View v) 
+//		    {
+////                Intent myIntent = new Intent(v.getContext(), EncDecManagerServive.class);
+////                myIntent.putExtra(ConstVals.REQUESTER_TYPE_KEY, ConstVals.REQUEST_FROM_NFC);
+////                myIntent.putExtra(ConstVals.TAG_TYPE_KEY, ConstVals.TAG_TYPE_ENCRYPTOR);
+////                startService(myIntent);
+//		    	
+//		    }
+//	    }); 
 	    
 	    
 	    

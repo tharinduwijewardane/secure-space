@@ -127,7 +127,8 @@ public class EncDecManagerServive extends IntentService {
 		selectedItem = new CryptFile(root + "/securespace/aaa.txt.enc"); //used for testing
 
 		try {
-			encryptorForServices = new EncryptorForService(password, encryptAlgorithmCode); //initialize encryptor/decryptor
+			// encryptorForServices = new EncryptorForService(password, encryptAlgorithmCode); //initialize encryptor/decryptor
+			encryptorForServices = new EncryptorForService(password); //initialize encryptor/decryptor. algo is default (AES)
 		} catch (NoSuchAlgorithmException e1) {
 			e1.printStackTrace();
 		} catch (InvalidKeySpecException e1) {
@@ -158,14 +159,16 @@ public class EncDecManagerServive extends IntentService {
 				for (String path : selectedFileList) {
 					CryptFile currentFile = new CryptFile(path);
 					
-					wakeLock.acquire();
-					try {
-						Log.d("-MY-", "doEnc path: " + path);
-						doEnc(currentFile);
-					} catch (Exception e) {
-						e.printStackTrace();
-					} finally {
-						wakeLock.release();
+					if (currentFile.exists()) {
+						wakeLock.acquire();
+						try {
+							Log.d("-MY-", "doEnc path: " + path);
+							doEnc(currentFile);
+						} catch (Exception e) {
+							e.printStackTrace();
+						} finally {
+							wakeLock.release();
+						}
 					}
 				}
 				
@@ -196,16 +199,19 @@ public class EncDecManagerServive extends IntentService {
 						path += ".enc";		//name of the encrypted file
 					}
 					
+					File ff = new File(path); //work around by th
+					if (ff.exists()) {
 					CryptFile currentFile = new CryptFile(path);
 					
-					wakeLock.acquire();
-					try {
-						Log.d("-MY-", "doEnc path: " + path);
-						doDec(currentFile);
-					} catch (Exception e) {
-						e.printStackTrace();
-					} finally {
-						wakeLock.release();
+						wakeLock.acquire();
+						try {
+							Log.d("-MY-", "doEnc path: " + path);
+							doDec(currentFile);
+						} catch (Exception e) {
+							e.printStackTrace();
+						} finally {
+							wakeLock.release();
+						}
 					}
 				}
 				
@@ -241,7 +247,8 @@ public class EncDecManagerServive extends IntentService {
 				// " : " + inputFile.getName() + " : " + inputFile.length());
 				if (settingDataHolder.getItemAsBoolean("SC_FileEnc",
 						"SI_WipeSourceFiles"))
-					Helpers.wipeFileOrDirectory(inputFile, progressBarToken);
+					Log.d("-MY-", "wipe source requested");
+					WipeSource.wipeFileOrDirectory(inputFile, progressBarToken); //WipeSource by th instead of Helpers
 			} catch (Exception e) {
 
 				e.printStackTrace();

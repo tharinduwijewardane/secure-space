@@ -50,10 +50,10 @@
 			android:id="@+id/bSettings_th"
 			android:layout_width="fill_parent"
 			android:layout_weight="1.0"
-			style="@style/Button_A"
+			style="@style/ButtonSettings"
 			android:ellipsize="end"
 			></Button>
-		<Button
+		<!-- <Button
 			android:text="Test"
 			android:layout_height="wrap_content"
 			android:id="@+id/bTest_th"
@@ -61,14 +61,14 @@
 			android:layout_weight="1.0"
 			style="@style/Button_A"
 			android:ellipsize="end"
-			></Button>
+			></Button> -->
 		<Button
 			android:text="Select Files"
 			android:layout_height="wrap_content"
 			android:id="@+id/bSelectfiles_th"
 			android:layout_width="fill_parent"
 			android:layout_weight="1.0"
-			style="@style/Button_A"
+			style="@style/ButtonSettings"
 			android:ellipsize="end"
 			></Button>
 
